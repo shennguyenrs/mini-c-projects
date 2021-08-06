@@ -28,19 +28,29 @@ const allAuthors = async (_root, args) => {
 const allBooks = async (_root, args) => {
   const books = await Book.find({}).populate({ path: 'author' });
 
-  if (!args.author && !args.genre) return books;
+  const refinedBooks = books.map(
+    (item) =>
+      new Object({
+        title: item.title,
+        published: item.published,
+        author: item.author.name,
+        genres: item.genres,
+        id: item._id,
+      })
+  );
+
+  if (!args.author && !args.genre) return refinedBooks;
 
   if (args.author && !args.genre)
-    return books.filter((item) => item.author.name === args.author);
+    return refinedBooks.filter((item) => item.author === args.author);
 
   if (!args.author && args.genre)
     // Using includes to check if the item is in array
     // the method return boolean
-    return books.filter((item) => item.genres.includes(args.genre));
+    return refinedBooks.filter((item) => item.genres.includes(args.genre));
 
-  return books.filter(
-    (item) =>
-      item.author.name === args.author && item.genres.includes(args.genre)
+  return refinedBooks.filter(
+    (item) => item.author === args.author && item.genres.includes(args.genre)
   );
 };
 

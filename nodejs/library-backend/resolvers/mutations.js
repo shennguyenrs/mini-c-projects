@@ -1,27 +1,49 @@
 const { UserInputError } = require('apollo-server');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 // Import  Mongo models
 const Author = require('../models/author');
 const Book = require('../models/book');
 const User = require('../models/user');
 
+const { SERECT_KEY } = require('../utils/config');
+
 // Add new book to database
 const addBook = async (_root, args) => {
-  const books = await Book.find({});
+  const foundBook = await Book.findOne({ title: args.title });
 
   // Check duplicate title
-  if (books.find((item) => item.title === args.title)) {
+  // and throw new error
+  if (foundBook) {
     throw new UserInputError('Title must be unique', {
       invalidArgs: args.title,
     });
   }
+  // If not found the author
+  // create new author
+  let foundAuthor = await Author.findOne({ name: args.author });
 
-  const book = { ...args };
+  if (!foundAuthor) {
+    foundAuthor = new Author({
+      name: args.author,
+      born: null,
+    });
 
-  await Book.save(book);
+    await foundAuthor.save();
+  }
 
-  return book;
+  const book = new Book({ ...args, author: foundAuthor._id });
+
+  await book.save();
+
+  return {
+    title: book.title,
+    published: book.published,
+    author: foundAuthor.name,
+    genres: book.genres,
+    id: book._id,
+  };
 };
 
 // Add new author
@@ -37,41 +59,66 @@ const addAuthor = async (_root, args) => {
 
   const newAuthor = new Author({
     name: args.name,
-    born: args.born ? args.born : null,
+    born: args.born || null,
   });
-  const savedAuthor = newAuthor.save();
-  return savedAuthor;
+
+  await newAuthor.save();
+
+  return {
+    name: newAuthor.name,
+    born: newAuthor.born,
+  };
 };
 
 // Edit author born filter by author name
 const editAuthor = async (_root, args) => {
-  const updatedAuthor = await Author.findOneAndUpdate(
-    { name: args.name },
-    { born: args.setBornTo }
-  );
+  await Author.findOneAndUpdate({ name: args.name }, { born: args.setBornTo });
 
-  return updatedAuthor;
+  return Author.findOne({ name: args.name });
 };
 
 // Add new user to database
-const addUser = async (_root, args) => {
+const createUser = async (_root, args) => {
   const saltRound = 10;
   const hashPw = await bcrypt.hash(args.password, saltRound);
+
   const newUser = new User({
     username: args.username,
     password: hashPw,
-    favoriteGenre: args.favoriteGenre,
+    favoriteGenre: args.favoriteGenre || null,
   });
 
   const savedUser = await newUser.save();
+
   return savedUser;
+};
+
+// Login
+const login = async (_root, args) => {
+  const foundUser = await User.findOne({ username: args.username });
+
+  // If not found username in database
+  if (!foundUser) throw new UserInputError('Wrong username');
+
+  const validPass = await bcrypt.compare(args.password, foundUser.password);
+
+  // If password is not valid
+  if (!validPass) throw new UserInputError('Wrong password');
+
+  const userForToken = {
+    username: foundUser.name,
+    id: foundUser._id,
+  };
+
+  return { value: jwt.sign(userForToken, SERECT_KEY) };
 };
 
 const mutations = {
   addBook: (root, args) => addBook(root, args),
   addAuthor: (root, args) => addAuthor(root, args),
   editAuthor: (root, args) => editAuthor(root, args),
-  addUser: (root, args) => addUser(root, args),
+  createUser: (root, args) => createUser(root, args),
+  login: (root, args) => login(root, args),
 };
 
 module.exports = mutations;

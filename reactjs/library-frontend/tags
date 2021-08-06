@@ -17,6 +17,7 @@ author	src/components/NewBook.js	/^          author$/;"	r
 author	src/components/NewBook.js	/^        author: author.value,$/;"	r
 author	src/queries.js	/^      author$/;"	r
 author	src/queries.js	/^      author: $author$/;"	r
+authors	src/App.js	/^        authors={allData.data.allAuthors}$/;"	r
 authors	src/components/Authors.js	/^  authors: PropTypes.array,$/;"	r
 authors	src/components/Authors.js	/^const Authors = ({ show, authors, setErr }) => {$/;"	r
 books	src/components/Books.js	/^  books: PropTypes.array,$/;"	r
@@ -50,8 +51,10 @@ refetchQueries	src/components/Authors.js	/^    refetchQueries: [{ query: ALL_DAT
 refetchQueries	src/components/NewBook.js	/^    refetchQueries: [{ query: ALL_DATA }],$/;"	r
 reset	src/hooks/useField.js	/^    reset,$/;"	r
 setBornTo	src/queries.js	/^    editAuthor(name: $name, setBornTo: $born) {$/;"	r
+setErr	src/App.js	/^        setErr={notify}$/;"	r
 setErr	src/components/Authors.js	/^  setErr: PropTypes.func,$/;"	r
 setErr	src/components/NewBook.js	/^  setErr: PropTypes.func,$/;"	r
+show	src/App.js	/^        show={page === 'authors'}$/;"	r
 show	src/components/Authors.js	/^  show: PropTypes.bool,$/;"	r
 show	src/components/Books.js	/^  show: PropTypes.bool,$/;"	r
 show	src/components/NewBook.js	/^  show: PropTypes.bool,$/;"	r

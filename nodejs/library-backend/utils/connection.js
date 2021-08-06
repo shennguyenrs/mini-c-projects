@@ -8,7 +8,7 @@ const { MONGO_URI } = require('./config');
 const db = mongoose.createConnection(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useFindAndModify: true,
+  useFindAndModify: false,
   useCreateIndex: true,
 });
 

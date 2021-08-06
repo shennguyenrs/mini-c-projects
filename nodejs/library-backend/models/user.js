@@ -8,7 +8,6 @@ const schema = new Schema({
     type: String,
     required: true,
     unique: true,
-    minlength: 6,
   },
   password: {
     type: String,
