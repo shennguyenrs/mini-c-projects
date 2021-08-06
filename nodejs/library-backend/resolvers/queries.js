@@ -54,12 +54,15 @@ const allBooks = async (_root, args) => {
   );
 };
 
+const returnMe = (_root, _args, context) => context.currentUser;
+
 // Final queries function
 const queries = {
   authorsCount: () => authorsCount(),
   booksCount: () => booksCount(),
   allAuthors: (root, args) => allAuthors(root, args),
   allBooks: (root, args) => allBooks(root, args),
+  me: (root, args, context) => returnMe(root, args, context),
 };
 
 module.exports = queries;

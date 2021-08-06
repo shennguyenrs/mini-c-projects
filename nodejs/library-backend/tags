@@ -12,10 +12,12 @@ No	apollo/typeDefs.js	/^    No$/;"	r
 Query	apollo/server.js	/^  Query: queries,$/;"	r
 SERECT_KEY	utils/config.js	/^  SERECT_KEY,$/;"	r
 Yes	apollo/typeDefs.js	/^    Yes$/;"	r
+_args	resolvers/queries.js	/^const returnMe = (_root, _args, context) => context.currentUser;$/;"	r
 addAuthor	resolvers/mutations.js	/^  addAuthor: (root, args) => addAuthor(root, args),$/;"	r
 addBook	resolvers/mutations.js	/^  addBook: (root, args) => addBook(root, args),$/;"	r
 allAuthors	resolvers/queries.js	/^  allAuthors: (root, args) => allAuthors(root, args),$/;"	r
 allBooks	resolvers/queries.js	/^  allBooks: (root, args) => allBooks(root, args),$/;"	r
+args	resolvers/queries.js	/^  me: (root, args, context) => returnMe(root, args, context),$/;"	r
 author	apollo/typeDefs.js	/^      author: String!$/;"	r
 author	apollo/typeDefs.js	/^    author: String!$/;"	r
 author	models/book.js	/^  author: {$/;"	r
@@ -102,6 +104,7 @@ invalidArgs	resolvers/mutations.js	/^      invalidArgs: args.name,$/;"	r
 invalidArgs	resolvers/mutations.js	/^      invalidArgs: args.title,$/;"	r
 login	resolvers/mutations.js	/^  login: (root, args) => login(root, args),$/;"	r
 me	apollo/typeDefs.js	/^    me: User$/;"	r
+me	resolvers/queries.js	/^  me: (root, args, context) => returnMe(root, args, context),$/;"	r
 minlength	models/author.js	/^    minlength: 8,$/;"	r
 minlength	models/book.js	/^    minlength: 8,$/;"	r
 minlength	models/user.js	/^    minlength: 6,$/;"	r
