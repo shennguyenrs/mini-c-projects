@@ -1,0 +1,145 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Author	apollo/server.js	/^  Author: authors,$/;"	r
+MONGO_URI	utils/config.js	/^  MONGO_URI,$/;"	r
+Mutation	apollo/server.js	/^  Mutation: mutations,$/;"	r
+NODE_ENV	utils/config.js	/^  process.env.NODE_ENV === 'test'$/;"	r
+No	apollo/typeDefs.js	/^    No$/;"	r
+Query	apollo/server.js	/^  Query: queries,$/;"	r
+SERECT_KEY	utils/config.js	/^  SERECT_KEY,$/;"	r
+Yes	apollo/typeDefs.js	/^    Yes$/;"	r
+addAuthor	resolvers/mutations.js	/^  addAuthor: (root, args) => addAuthor(root, args),$/;"	r
+addBook	resolvers/mutations.js	/^  addBook: (root, args) => addBook(root, args),$/;"	r
+addUser	resolvers/mutations.js	/^  addUser: (root, args) => addUser(root, args),$/;"	r
+allAuthors	resolvers/queries.js	/^  allAuthors: (root, args) => allAuthors(root, args),$/;"	r
+allBooks	resolvers/queries.js	/^  allBooks: (root, args) => allBooks(root, args),$/;"	r
+author	apollo/typeDefs.js	/^      author: String!$/;"	r
+author	apollo/typeDefs.js	/^    author: String!$/;"	r
+author	models/book.js	/^  author: {$/;"	r
+author	sampleDB/Books.js	/^    author: 'Fyodor Dostoevsky',$/;"	r
+author	sampleDB/Books.js	/^    author: 'Joshua Kerievsky',$/;"	r
+author	sampleDB/Books.js	/^    author: 'Martin Fowler',$/;"	r
+author	sampleDB/Books.js	/^    author: 'Robert Martin',$/;"	r
+author	sampleDB/Books.js	/^    author: 'Sandi Metz',$/;"	r
+author	utils/addSamples.js	/^        author = savedAuthor;$/;"	r
+author	utils/addSamples.js	/^        author: author.id,$/;"	r
+author	utils/addSamples.js	/^      let author = await Author.findOne({ name: item.author });$/;"	r
+authors	sampleDB/Authors.js	/^let authors = [$/;"	r
+authorsCount	apollo/typeDefs.js	/^    authorsCount: Int!$/;"	r
+authorsCount	tests/grapql.test.js	/^			authorsCount,$/;"	r
+books	sampleDB/Books.js	/^let books = [$/;"	r
+booksCount	apollo/typeDefs.js	/^    booksCount: Int!$/;"	r
+booksCount	tests/author.test.js	/^				booksCount$/;"	r
+booksCount	tests/grapql.test.js	/^			booksCount$/;"	r
+born	apollo/typeDefs.js	/^    addAuthor(name: String!, born: Int): Author$/;"	r
+born	apollo/typeDefs.js	/^    born: Int$/;"	r
+born	models/author.js	/^  born: {$/;"	r
+born	resolvers/mutations.js	/^    born: args.born ? args.born : null,$/;"	r
+born	sampleDB/Authors.js	/^    born: 1821,$/;"	r
+born	sampleDB/Authors.js	/^    born: 1952,$/;"	r
+born	sampleDB/Authors.js	/^    born: 1963,$/;"	r
+born	utils/addSamples.js	/^          born: null,$/;"	r
+born	utils/addSamples.js	/^        born: item.born ? item.born : null,$/;"	r
+editAuthor	resolvers/mutations.js	/^  editAuthor: (root, args) => editAuthor(root, args),$/;"	r
+exports	apollo/server.js	/^module.exports = server;$/;"	r
+exports	apollo/typeDefs.js	/^module.exports = typeDefs;$/;"	r
+exports	app.js	/^module.exports = app;$/;"	r
+exports	models/author.js	/^module.exports = connection.model('Author', schema);$/;"	r
+exports	models/book.js	/^module.exports = connection.model('Book', schema);$/;"	r
+exports	models/user.js	/^module.exports = connection.model('User', schema);$/;"	r
+exports	resolvers/authors.js	/^module.exports = authors;$/;"	r
+exports	resolvers/mutations.js	/^module.exports = mutations;$/;"	r
+exports	resolvers/queries.js	/^module.exports = queries;$/;"	r
+exports	sampleDB/Authors.js	/^module.exports = authors;$/;"	r
+exports	sampleDB/Books.js	/^module.exports = books;$/;"	r
+exports	utils/addSamples.js	/^module.exports = { addAuthors, addBooks };$/;"	r
+exports	utils/cleanSamples.js	/^module.exports = { cleanSamples };$/;"	r
+exports	utils/config.js	/^module.exports = {$/;"	r
+exports	utils/connection.js	/^module.exports = db;$/;"	r
+favoriteGenre	apollo/typeDefs.js	/^    favoriteGenre: String$/;"	r
+favoriteGenre	models/user.js	/^  favoriteGenre: {$/;"	r
+favoriteGenre	resolvers/mutations.js	/^    favoriteGenre: args.favoriteGenre,$/;"	r
+genre	apollo/typeDefs.js	/^    allBooks(author: String, genre: String): [Book!]!$/;"	r
+genre	tests/grapql.test.js	/^    const query = `{ allBooks(author: "Robert Martin", genre: "refactoring") { title }}`;$/;"	r
+genres	apollo/typeDefs.js	/^      genres: [String!]!$/;"	r
+genres	apollo/typeDefs.js	/^    genres: [String!]!$/;"	r
+genres	models/book.js	/^  genres: {$/;"	r
+genres	sampleDB/Books.js	/^    genres: ['agile', 'patterns', 'design'],$/;"	r
+genres	sampleDB/Books.js	/^    genres: ['classic', 'crime'],$/;"	r
+genres	sampleDB/Books.js	/^    genres: ['classic', 'revolution'],$/;"	r
+genres	sampleDB/Books.js	/^    genres: ['refactoring', 'design'],$/;"	r
+genres	sampleDB/Books.js	/^    genres: ['refactoring', 'patterns'],$/;"	r
+genres	sampleDB/Books.js	/^    genres: ['refactoring'],$/;"	r
+genres	utils/addSamples.js	/^        genres: item.genres,$/;"	r
+id	apollo/typeDefs.js	/^    id: ID!$/;"	r
+invalidArgs	resolvers/mutations.js	/^      invalidArgs: args.name,$/;"	r
+invalidArgs	resolvers/mutations.js	/^      invalidArgs: args.title,$/;"	r
+minlength	models/author.js	/^    minlength: 8,$/;"	r
+minlength	models/book.js	/^    minlength: 8,$/;"	r
+minlength	models/user.js	/^    minlength: 6,$/;"	r
+name	apollo/typeDefs.js	/^    name: String!$/;"	r
+name	models/author.js	/^  name: {$/;"	r
+name	resolvers/mutations.js	/^    name: args.name,$/;"	r
+name	resolvers/queries.js	/^      item.author.name === args.author && item.genres.includes(args.genre)$/;"	r
+name	sampleDB/Authors.js	/^    name: 'Fyodor Dostoevsky',$/;"	r
+name	sampleDB/Authors.js	/^    name: 'Joshua Kerievsky', \/\/ birthyear not known$/;"	r
+name	sampleDB/Authors.js	/^    name: 'Martin Fowler',$/;"	r
+name	sampleDB/Authors.js	/^    name: 'Robert Martin',$/;"	r
+name	sampleDB/Authors.js	/^    name: 'Sandi Metz', \/\/ birthyear not known$/;"	r
+name	tests/author.test.js	/^				name$/;"	r
+name	utils/addSamples.js	/^          name: item.author,$/;"	r
+name	utils/addSamples.js	/^        name: item.name,$/;"	r
+password	apollo/typeDefs.js	/^    addUser(username: String!, password: String!, favoriteGenre: String!): User$/;"	r
+password	apollo/typeDefs.js	/^    password: String!$/;"	r
+password	models/user.js	/^  password: {$/;"	r
+password	resolvers/mutations.js	/^    password: hashPw,$/;"	r
+published	apollo/typeDefs.js	/^      published: Int!$/;"	r
+published	apollo/typeDefs.js	/^    published: Int!$/;"	r
+published	models/book.js	/^  published: {$/;"	r
+published	sampleDB/Books.js	/^    published: 1866,$/;"	r
+published	sampleDB/Books.js	/^    published: 1872,$/;"	r
+published	sampleDB/Books.js	/^    published: 2002,$/;"	r
+published	sampleDB/Books.js	/^    published: 2008,$/;"	r
+published	sampleDB/Books.js	/^    published: 2012,$/;"	r
+published	sampleDB/Books.js	/^    published: 2018,$/;"	r
+published	utils/addSamples.js	/^        published: item.published,$/;"	r
+query	tests/grapql.test.js	/^      query: query,$/;"	r
+ref	models/book.js	/^    ref: 'Author',$/;"	r
+required	models/author.js	/^    required: true,$/;"	r
+required	models/book.js	/^    required: true,$/;"	r
+required	models/user.js	/^    required: true,$/;"	r
+resolvers	apollo/server.js	/^  resolvers,$/;"	r
+setBornTo	apollo/typeDefs.js	/^    editAuthor(name: String!, setBornTo: Int!): Author$/;"	r
+title	apollo/typeDefs.js	/^      title: String!$/;"	r
+title	apollo/typeDefs.js	/^    title: String!$/;"	r
+title	models/book.js	/^  title: {$/;"	r
+title	sampleDB/Books.js	/^    title: 'Agile software development',$/;"	r
+title	sampleDB/Books.js	/^    title: 'Clean Code',$/;"	r
+title	sampleDB/Books.js	/^    title: 'Crime and punishment',$/;"	r
+title	sampleDB/Books.js	/^    title: 'Practical Object-Oriented Design, An Agile Primer Using Ruby',$/;"	r
+title	sampleDB/Books.js	/^    title: 'Refactoring to patterns',$/;"	r
+title	sampleDB/Books.js	/^    title: 'Refactoring, edition 2',$/;"	r
+title	sampleDB/Books.js	/^    title: 'The Demon ',$/;"	r
+title	utils/addSamples.js	/^        title: item.title,$/;"	r
+type	models/author.js	/^    type: Number,$/;"	r
+type	models/author.js	/^    type: String,$/;"	r
+type	models/book.js	/^    type: Number,$/;"	r
+type	models/book.js	/^    type: Schema.Types.ObjectId,$/;"	r
+type	models/book.js	/^    type: String,$/;"	r
+type	models/book.js	/^    type: [String],$/;"	r
+type	models/user.js	/^    type: String,$/;"	r
+typeDefs	apollo/server.js	/^  typeDefs,$/;"	r
+unique	models/author.js	/^    unique: true,$/;"	r
+unique	models/book.js	/^    unique: true,$/;"	r
+unique	models/user.js	/^    unique: true,$/;"	r
+useCreateIndex	utils/connection.js	/^  useCreateIndex: true,$/;"	r
+useFindAndModify	utils/connection.js	/^  useFindAndModify: true,$/;"	r
+useNewUrlParser	utils/connection.js	/^  useNewUrlParser: true,$/;"	r
+useUnifiedTopology	utils/connection.js	/^  useUnifiedTopology: true,$/;"	r
+username	apollo/typeDefs.js	/^    username: String!$/;"	r
+username	models/user.js	/^  username: {$/;"	r
+username	resolvers/mutations.js	/^    username: args.username,$/;"	r
