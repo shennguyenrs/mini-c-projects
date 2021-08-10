@@ -47,7 +47,7 @@ const typeDefs = gql`
       username: String!
       password: String!
       favoriteGenre: String
-    ): User
+    ): Token
     login(username: String!, password: String!): Token
   }
 `;

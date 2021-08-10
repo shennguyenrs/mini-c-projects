@@ -98,6 +98,7 @@ genres	utils/addSamples.js	/^        genres: item.genres,$/;"	r
 id	apollo/typeDefs.js	/^    id: ID!$/;"	r
 id	resolvers/mutations.js	/^    id: book._id,$/;"	r
 id	resolvers/mutations.js	/^    id: foundUser._id,$/;"	r
+id	resolvers/mutations.js	/^    id: savedUser._id,$/;"	r
 id	resolvers/queries.js	/^        id: item._id,$/;"	r
 id	tests/grapql.test.js	/^				id$/;"	r
 invalidArgs	resolvers/mutations.js	/^      invalidArgs: args.name,$/;"	r
@@ -189,6 +190,7 @@ username	apollo/typeDefs.js	/^    username: String!$/;"	r
 username	models/user.js	/^  username: {$/;"	r
 username	resolvers/mutations.js	/^    username: args.username,$/;"	r
 username	resolvers/mutations.js	/^    username: foundUser.name,$/;"	r
+username	resolvers/mutations.js	/^    username: savedUser.name,$/;"	r
 username	tests/grapql.test.js	/^				username$/;"	r
 username	tests/grapql.test.js	/^				username: "tester",$/;"	r
 value	apollo/typeDefs.js	/^    value: String!$/;"	r

@@ -17,69 +17,127 @@ ApolloClient	src/index.js	/^  ApolloClient,$/;"	r
 ApolloProvider	src/index.js	/^  ApolloProvider,$/;"	r
 HttpLink	src/index.js	/^  HttpLink,$/;"	r
 InMemoryCache	src/index.js	/^  InMemoryCache,$/;"	r
+allAuthors	src/components/Authors.js	/^          allAuthors: [...dataInStore.allAuthors, res.data.updateAuthor],$/;"	r
+allAuthors	src/components/NewBook.js	/^          allAuthors: [...dataInStore.allAuthors],$/;"	r
+allBooks	src/components/Authors.js	/^          allBooks: [...dataInStore.allBooks],$/;"	r
+allBooks	src/components/NewBook.js	/^          allBooks: [...dataInStore.allBooks, res.data.addBook],$/;"	r
 author	src/components/NewBook.js	/^          author$/;"	r
 author	src/components/NewBook.js	/^        author: author.value,$/;"	r
 author	src/queries.js	/^      author$/;"	r
 author	src/queries.js	/^      author: $author$/;"	r
-authors	src/App.js	/^        authors={allData.data.allAuthors}$/;"	r
+authorization	src/index.js	/^      authorization: token ? `bearer ${token}` : null,$/;"	r
+authors	src/App.js	/^          authors={authors}$/;"	r
 authors	src/components/Authors.js	/^  authors: PropTypes.array,$/;"	r
-authors	src/components/Authors.js	/^const Authors = ({ show, authors, setErr }) => {$/;"	r
+authors	src/components/Authors.js	/^const Authors = ({ show, authors, setErr, isLogined }) => {$/;"	r
 books	src/components/Books.js	/^  books: PropTypes.array,$/;"	r
+books	src/components/Recommendation.js	/^  books: PropTypes.array,$/;"	r
+books	src/components/Recommendation.js	/^const Recommendation = ({ show, books, favoriteGenre }) => {$/;"	r
 booksCount	src/queries.js	/^      booksCount$/;"	r
-born	src/components/Authors.js	/^        born$/;"	r
+born	src/components/Authors.js	/^          born$/;"	r
 born	src/queries.js	/^      born$/;"	r
-cache	src/index.js	/^  cache: new InMemoryCache(),$/;"	r
+cache	src/index.js	/^  cache: cache,$/;"	r
+changePage	src/App.js	/^          changePage={setPage}$/;"	r
+changePage	src/components/LoginForm.js	/^  changePage,$/;"	r
+changePage	src/components/LoginForm.js	/^  changePage: PropTypes.func,$/;"	r
+changePage	src/components/NewBook.js	/^  changePage: PropTypes.func,$/;"	r
+changePage	src/components/SignUpForm.js	/^  changePage: PropTypes.func,$/;"	r
+currentGenres	src/components/Books.js	/^      currentGenres = currentGenres.concat(a.genres);$/;"	r
+currentGenres	src/components/Books.js	/^    let currentGenres = genres;$/;"	r
+data	src/components/Authors.js	/^        data: {$/;"	r
+data	src/components/LoginForm.js	/^          data: {$/;"	r
+data	src/components/NewBook.js	/^        data: {$/;"	r
 errMes	src/components/Notification.js	/^  errMes: PropTypes.string,$/;"	r
+favoriteGenre	src/App.js	/^          favoriteGenre={favoriteGenre}$/;"	r
+favoriteGenre	src/components/Recommendation.js	/^  favoriteGenre: PropTypes.string,$/;"	r
+favoriteGenre	src/components/SignUpForm.js	/^        favoriteGenre: favoriteGenre.value,$/;"	r
 favoriteGenre	src/queries.js	/^      favoriteGenre$/;"	r
 favoriteGenre	src/queries.js	/^      favoriteGenre: $favoriteGenre$/;"	r
+filteredBooks	src/App.js	/^          filteredBooks={books.filter((a) => a.genres.includes(favoriteGenre))}$/;"	r
 genres	src/components/NewBook.js	/^        genres,$/;"	r
 genres	src/queries.js	/^      genres$/;"	r
 genres	src/queries.js	/^      genres: $genres$/;"	r
+headers	src/index.js	/^    headers: {$/;"	r
 id	src/queries.js	/^      id$/;"	r
+isLogined	src/App.js	/^          isLogined={token !== null ? true : false}$/;"	r
+isLogined	src/components/Authors.js	/^  isLogined: PropTypes.bool,$/;"	r
+key	src/components/Books.js	/^            key={g}$/;"	r
 label	src/components/Authors.js	/^    options.push({ value: p.name, label: p.name });$/;"	r
-link	src/index.js	/^  link: new HttpLink({$/;"	r
+link	src/index.js	/^  link: authLink.concat(httpLink),$/;"	r
+me	src/components/LoginForm.js	/^            me: { ...data },$/;"	r
 name	src/queries.js	/^      name$/;"	r
-onChange	src/components/Authors.js	/^          onChange={handleSelectAuthor}$/;"	r
+onChange	src/components/Authors.js	/^            onChange={handleSelectAuthor}$/;"	r
 onChange	src/hooks/useField.js	/^    onChange,$/;"	r
-onClick	src/components/Authors.js	/^          onClick={handleUpdateAuthor}$/;"	r
-options	src/components/Authors.js	/^          options={options}$/;"	r
+onClick	src/components/Authors.js	/^            onClick={handleUpdateAuthor}$/;"	r
+onClick	src/components/Books.js	/^            onClick={(e) => handleChooseGenre(e)}$/;"	r
+options	src/components/Authors.js	/^            options={options}$/;"	r
 password	src/components/LoginForm.js	/^      password: <input {...password} \/> <br \/>$/;"	r
+password	src/components/SignUpForm.js	/^        password: password.value,$/;"	r
+password	src/components/SignUpForm.js	/^      password: <input {...password} \/> <br \/>$/;"	r
 password	src/queries.js	/^      password: $password$/;"	r
 password	src/queries.js	/^    login(username: $username, password: $password) {$/;"	r
-placeholder	src/components/Authors.js	/^          placeholder="Select an author"$/;"	r
+placeholder	src/components/Authors.js	/^            placeholder="Select an author"$/;"	r
 propTypes	src/components/Authors.js	/^Authors.propTypes = {$/;"	r
 propTypes	src/components/Books.js	/^Books.propTypes = {$/;"	r
 propTypes	src/components/LoginForm.js	/^LoginForm.propTypes = {$/;"	r
 propTypes	src/components/NewBook.js	/^NewBook.propTypes = {$/;"	r
 propTypes	src/components/Notification.js	/^Notification.propTypes = {$/;"	r
+propTypes	src/components/Recommendation.js	/^Recommendation.propTypes = {$/;"	r
+propTypes	src/components/SignUpForm.js	/^SignUpForm.propTypes = {$/;"	r
 published	src/components/NewBook.js	/^          published$/;"	r
 published	src/components/NewBook.js	/^        published: Number(published.value),$/;"	r
 published	src/queries.js	/^      published$/;"	r
 published	src/queries.js	/^      published: $published$/;"	r
-refetchQueries	src/components/Authors.js	/^    refetchQueries: [{ query: ALL_DATA }],$/;"	r
-refetchQueries	src/components/NewBook.js	/^    refetchQueries: [{ query: ALL_DATA }],$/;"	r
+query	src/components/Authors.js	/^        query: ALL_DATA,$/;"	r
+query	src/components/LoginForm.js	/^          query: CURRENT_USER,$/;"	r
+query	src/components/NewBook.js	/^        query: ALL_DATA,$/;"	r
+recommendation	src/App.js	/^          recommendation$/;"	r
 reset	src/hooks/useField.js	/^    reset,$/;"	r
 setBornTo	src/queries.js	/^    editAuthor(name: $name, setBornTo: $born) {$/;"	r
-setErr	src/App.js	/^        setErr={notify}$/;"	r
+setErr	src/App.js	/^          setErr={notify}$/;"	r
 setErr	src/components/Authors.js	/^  setErr: PropTypes.func,$/;"	r
+setErr	src/components/LoginForm.js	/^  setErr,$/;"	r
+setErr	src/components/LoginForm.js	/^  setErr: PropTypes.func,$/;"	r
 setErr	src/components/NewBook.js	/^  setErr: PropTypes.func,$/;"	r
-show	src/App.js	/^        show={page === 'authors'}$/;"	r
+setErr	src/components/NewBook.js	/^const NewBook = ({ show, setErr, changePage }) => {$/;"	r
+setErr	src/components/SignUpForm.js	/^  setErr: PropTypes.func,$/;"	r
+setErr	src/components/SignUpForm.js	/^const SignUpForm = ({ show, setErr, setToken, changePage }) => {$/;"	r
+setFavoriteGenre	src/App.js	/^          setFavoriteGenre={setFavoriteGenre}$/;"	r
+setFavoriteGenre	src/components/LoginForm.js	/^  setFavoriteGenre,$/;"	r
+setFavoriteGenre	src/components/LoginForm.js	/^  setFavoriteGenre: PropTypes.func,$/;"	r
+setToken	src/App.js	/^          setToken={setToken}$/;"	r
+setToken	src/components/LoginForm.js	/^  setToken,$/;"	r
+setToken	src/components/LoginForm.js	/^  setToken: PropTypes.func,$/;"	r
+setToken	src/components/SignUpForm.js	/^  setToken: PropTypes.func,$/;"	r
+show	src/App.js	/^          show={page === 'authors'}$/;"	r
+show	src/App.js	/^          show={page === 'login'}$/;"	r
+show	src/App.js	/^          show={page === 'recommendation'}$/;"	r
+show	src/App.js	/^          show={page === 'signup'}$/;"	r
 show	src/components/Authors.js	/^  show: PropTypes.bool,$/;"	r
 show	src/components/Books.js	/^  show: PropTypes.bool,$/;"	r
+show	src/components/LoginForm.js	/^  show,$/;"	r
 show	src/components/LoginForm.js	/^  show: PropTypes.bool,$/;"	r
 show	src/components/NewBook.js	/^  show: PropTypes.bool,$/;"	r
+show	src/components/Recommendation.js	/^  show: PropTypes.bool,$/;"	r
+show	src/components/SignUpForm.js	/^  show: PropTypes.bool,$/;"	r
 title	src/components/NewBook.js	/^          title$/;"	r
 title	src/components/NewBook.js	/^        title: title.value,$/;"	r
 title	src/queries.js	/^      title$/;"	r
 title	src/queries.js	/^      title: $title$/;"	r
-type	src/components/Authors.js	/^          type="submit"$/;"	r
+type	src/components/Authors.js	/^            type="submit"$/;"	r
+type	src/components/Books.js	/^            type="button"$/;"	r
 type	src/hooks/useField.js	/^    type,$/;"	r
-uri	src/index.js	/^    uri: 'http:\/\/192.168.3.15:4000',$/;"	r
+update	src/components/Authors.js	/^    update: (store, res) => {$/;"	r
+update	src/components/NewBook.js	/^    update: (store, res) => {$/;"	r
 username	src/components/LoginForm.js	/^      username: <input {...username} \/> <br \/>$/;"	r
+username	src/components/SignUpForm.js	/^        username: username.value,$/;"	r
+username	src/components/SignUpForm.js	/^      username: <input {...username} \/> <br \/>$/;"	r
 username	src/queries.js	/^      username$/;"	r
 username	src/queries.js	/^      username: $username$/;"	r
-value	src/components/Authors.js	/^          value="update author"$/;"	r
+value	src/components/Authors.js	/^            value="update author"$/;"	r
+value	src/components/Books.js	/^            value={g}$/;"	r
 value	src/hooks/useField.js	/^    value,$/;"	r
 value	src/queries.js	/^      value$/;"	r
 variables	src/components/Authors.js	/^      variables: { name: author, born: Number(born.value) },$/;"	r
+variables	src/components/LoginForm.js	/^      variables: { username: username.value, password: password.value },$/;"	r
 variables	src/components/NewBook.js	/^      variables: {$/;"	r
+variables	src/components/SignUpForm.js	/^      variables: {$/;"	r

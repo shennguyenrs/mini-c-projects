@@ -7,16 +7,28 @@ import useField from '../hooks/useField';
 
 import { UPDATE_AUTHOR, ALL_DATA } from '../queries';
 
-const Authors = ({ show, authors, setErr }) => {
+const Authors = ({ show, authors, setErr, isLogined }) => {
   if (!show) return null;
 
   const options = [];
   const [author, setAuthor] = useState('');
   const { reset: resetBorn, ...born } = useField('text');
   const [updateAuthor] = useMutation(UPDATE_AUTHOR, {
-    refetchQueries: [{ query: ALL_DATA }],
+    //refetchQueries: [{ query: ALL_DATA }],
     onError: (e) => {
       setErr(e.graphQLErrors[0].message);
+    },
+    // Using update to fectch data to cache
+    update: (store, res) => {
+      const dataInStore = store.readQuery({ query: ALL_DATA });
+      store.writeQuery({
+        query: ALL_DATA,
+        data: {
+          ...dataInStore,
+          allAuthors: [...dataInStore.allAuthors, res.data.updateAuthor],
+          allBooks: [...dataInStore.allBooks],
+        },
+      });
     },
   });
 
@@ -32,7 +44,7 @@ const Authors = ({ show, authors, setErr }) => {
     setAuthor(value);
   };
 
-  authors.forEach((p) => {
+  authors.map((p) => {
     options.push({ value: p.name, label: p.name });
   });
 
@@ -55,21 +67,23 @@ const Authors = ({ show, authors, setErr }) => {
           ))}
         </tbody>
       </table>
-      <div>
-        <h2>update birth year</h2>
-        <Select
-          options={options}
-          onChange={handleSelectAuthor}
-          placeholder="Select an author"
-        />
-        born
-        <input {...born} />
-        <input
-          type="submit"
-          value="update author"
-          onClick={handleUpdateAuthor}
-        />
-      </div>
+      {isLogined && (
+        <div>
+          <h2>update birth year</h2>
+          <Select
+            options={options}
+            onChange={handleSelectAuthor}
+            placeholder="Select an author"
+          />
+          born
+          <input {...born} />
+          <input
+            type="submit"
+            value="update author"
+            onClick={handleUpdateAuthor}
+          />
+        </div>
+      )}
     </>
   );
 };
@@ -81,4 +95,5 @@ Authors.propTypes = {
   show: PropTypes.bool,
   authors: PropTypes.array,
   setErr: PropTypes.func,
+  isLogined: PropTypes.bool,
 };

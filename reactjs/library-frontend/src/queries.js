@@ -45,6 +45,7 @@ export const UPDATE_AUTHOR = gql`
     editAuthor(name: $name, setBornTo: $born) {
       name
       born
+      booksCount
     }
   }
 `;
@@ -57,8 +58,8 @@ export const LOGIN = gql`
   }
 `;
 
-export const CREATE_USER = gql`
-  mutation createUser(
+export const SIGN_UP = gql`
+  mutation signup(
     $username: String!
     $password: String!
     $favoriteGenre: String
@@ -68,9 +69,16 @@ export const CREATE_USER = gql`
       password: $password
       favoriteGenre: $favoriteGenre
     ) {
+      value
+    }
+  }
+`;
+
+export const CURRENT_USER = gql`
+  query {
+    me {
       username
       favoriteGenre
-      id
     }
   }
 `;

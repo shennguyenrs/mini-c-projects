@@ -95,7 +95,12 @@ const createUser = async (_root, args) => {
 
   const savedUser = await newUser.save();
 
-  return savedUser;
+  const userForToken = {
+    username: savedUser.name,
+    id: savedUser._id,
+  };
+
+  return { value: jwt.sign(userForToken, SERECT_KEY) };
 };
 
 // Login

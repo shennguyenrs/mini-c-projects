@@ -28,7 +28,7 @@ const server = new ApolloServer({
     if (auth && auth.toLowerCase().startsWith('bearer')) {
       // Need to cut out "bearer" before verify token
       const decoded = jwt.verify(auth.substring(7), SERECT_KEY);
-      const currentUser = await User.findOne(decoded.id);
+      const currentUser = await User.findOne({ _id: decoded.id });
       return { currentUser };
     }
   },
