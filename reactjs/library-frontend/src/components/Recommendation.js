@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Recommendation = ({ show, books, favoriteGenre }) => {
+const Recommendation = ({ show, loading, filteredBooks, favoriteGenre }) => {
   if (!show) return null;
+
+  if (loading) return <>loading..</>;
 
   return (
     <>
@@ -18,7 +20,7 @@ const Recommendation = ({ show, books, favoriteGenre }) => {
             <th>author</th>
             <th>published</th>
           </tr>
-          {books.map((a) => (
+          {filteredBooks.map((a) => (
             <tr key={a.id}>
               <td>{a.title}</td>
               <td>{a.author}</td>
@@ -36,6 +38,7 @@ export default Recommendation;
 // PropTypes validation
 Recommendation.propTypes = {
   show: PropTypes.bool,
-  books: PropTypes.array,
+  loading: PropTypes.bool,
+  filteredBooks: PropTypes.array,
   favoriteGenre: PropTypes.string,
 };

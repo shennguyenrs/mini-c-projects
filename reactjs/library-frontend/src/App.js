@@ -1,16 +1,26 @@
-import React, { useState, useMemo } from 'react';
-import { useQuery, useApolloClient } from '@apollo/client';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
+import { useQuery, useApolloClient, useLazyQuery } from '@apollo/client';
 
 // Import components
-import Authors from './components/Authors';
+/* import Authors from './components/Authors';
 import Books from './components/Books';
 import NewBook from './components/NewBook';
 import Notification from './components/Notification';
 import LoginForm from './components/LoginForm';
 import SignUpForm from './components/SignUpForm';
-import Recommendation from './components/Recommendation';
+import Recommendation from './components/Recommendation'; */
 
-import { ALL_DATA } from './queries';
+// Dynamics import components
+const Authors = lazy(() => import('./components/Authors'));
+const Books = lazy(() => import('./components/Books'));
+const NewBook = lazy(() => import('./components/NewBook'));
+const Notification = lazy(() => import('./components/Notification'));
+const LoginForm = lazy(() => import('./components/LoginForm'));
+const SignUpForm = lazy(() => import('./components/SignUpForm'));
+const Recommendation = lazy(() => import('./components/Recommendation'));
+
+// Import queries
+import { ALL_DATA, CURRENT_USER } from './queries';
 
 const initToken = localStorage.getItem('user-token') || null;
 
@@ -23,16 +33,37 @@ const App = () => {
   const [books, setBooks] = useState([]);
   const client = useApolloClient();
 
-  const { data, loading } = useQuery(ALL_DATA);
+  const { data: allData, loading } = useQuery(ALL_DATA, {
+    onCompleted: () => {
+      setAuthors(allData.allAuthors);
+      setBooks(allData.allBooks);
+    },
+  });
 
-  if (loading) return <>Loading...</>;
+  const [getUser, { data: currentUser, loading: currentUserLoading }] =
+    useLazyQuery(CURRENT_USER, {
+      onCompleted: () => {
+        setFavoriteGenre(currentUser.me.favoriteGenre);
+      },
+      update: (store, res) => {
+        const dataInStore = store.readQuery({ query: CURRENT_USER });
+        store.writeQuery({
+          query: CURRENT_USER,
+          data: {
+            ...dataInStore,
+            me: {
+              favoriteGenre: res.me.favoriteGenre,
+            },
+          },
+        });
+      },
+    });
 
-  useMemo(() => {
-    if (data) {
-      setAuthors(data.allAuthors);
-      setBooks(data.allBooks);
-    }
-  }, [data]);
+  useEffect(() => {
+    if (token !== null) getUser();
+  }, [token]);
+
+  if (loading) return <>loading...</>;
 
   const notify = (message) => {
     setErrMess(message);
@@ -75,37 +106,41 @@ const App = () => {
 
   return (
     <>
-      {token !== null ? loginedMenu() : notLoginMenu()}
+      <Suspense fallback={<div>components loading...</div>}>
+        {token !== null ? loginedMenu() : notLoginMenu()}
 
-      <div>
-        <Notification errMes={errMes} />
-        <Authors
-          show={page === 'authors'}
-          authors={authors}
-          setErr={notify}
-          isLogined={token !== null ? true : false}
-        />
-        <Books show={page === 'books'} books={books} />
-        <Recommendation
-          show={page === 'recommendation'}
-          filteredBooks={books.filter((a) => a.genres.includes(favoriteGenre))}
-          favoriteGenre={favoriteGenre}
-        />
-        <NewBook show={page === 'add'} setErr={notify} changePage={setPage} />
-        <LoginForm
-          show={page === 'login'}
-          setToken={setToken}
-          setErr={notify}
-          changePage={setPage}
-          setFavoriteGenre={setFavoriteGenre}
-        />
-        <SignUpForm
-          show={page === 'signup'}
-          setErr={notify}
-          setToken={setToken}
-          changePage={setPage}
-        />
-      </div>
+        <div>
+          <Notification errMes={errMes} />
+          <Authors
+            show={page === 'authors'}
+            authors={authors}
+            setErr={notify}
+            isLogined={token !== null ? true : false}
+          />
+          <Books show={page === 'books'} books={books} />
+          <Recommendation
+            show={page === 'recommendation'}
+            loading={currentUserLoading}
+            filteredBooks={books.filter((a) =>
+              a.genres.includes(favoriteGenre)
+            )}
+            favoriteGenre={favoriteGenre}
+          />
+          <NewBook show={page === 'add'} setErr={notify} changePage={setPage} />
+          <LoginForm
+            show={page === 'login'}
+            setToken={setToken}
+            setErr={notify}
+            changePage={setPage}
+          />
+          <SignUpForm
+            show={page === 'signup'}
+            setErr={notify}
+            setToken={setToken}
+            changePage={setPage}
+          />
+        </div>
+      </Suspense>
     </>
   );
 };

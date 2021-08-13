@@ -1,47 +1,22 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { useMutation, useLazyQuery } from '@apollo/client';
+import { useMutation } from '@apollo/client';
 
 // Import Hooks
 import useField from '../hooks/useField';
 
 // Import queries
-import { LOGIN, CURRENT_USER } from '../queries';
+import { LOGIN } from '../queries';
 
-const LoginForm = ({
-  show,
-  setErr,
-  setToken,
-  changePage,
-  setFavoriteGenre,
-}) => {
+const LoginForm = ({ show, setErr, setToken, changePage }) => {
   if (!show) return null;
 
   const { reset: resetUsername, ...username } = useField('text');
   const { reset: resetPassword, ...password } = useField('password');
-  const [getUser, { data }] = useLazyQuery(CURRENT_USER);
 
   const [login, result] = useMutation(LOGIN, {
     onError: (err) => {
       setErr(err.graphQLErrors[0].message);
-    },
-    update: (store) => {
-      try {
-        const dataInStore = store.readQuery({ query: CURRENT_USER });
-
-        console.log(data);
-        setFavoriteGenre(data.me.favoriteGenre);
-
-        store.writeQuery({
-          query: CURRENT_USER,
-          data: {
-            ...dataInStore,
-            me: { ...data },
-          },
-        });
-      } catch (err) {
-        console.log(err);
-      }
     },
   });
 
@@ -63,8 +38,6 @@ const LoginForm = ({
     login({
       variables: { username: username.value, password: password.value },
     });
-
-    getUser();
 
     // Reset field after login
     resetUsername();
@@ -89,5 +62,4 @@ LoginForm.propTypes = {
   setErr: PropTypes.func,
   setToken: PropTypes.func,
   changePage: PropTypes.func,
-  setFavoriteGenre: PropTypes.func,
 };

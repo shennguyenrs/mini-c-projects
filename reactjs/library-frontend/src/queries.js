@@ -77,7 +77,6 @@ export const SIGN_UP = gql`
 export const CURRENT_USER = gql`
   query {
     me {
-      username
       favoriteGenre
     }
   }
