@@ -1,0 +1,53 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+App	App.js	/^export default function App() {$/;"	r
+StyleSheet	App.js	/^import { View, StyleSheet, SafeAreaView } from 'react-native';$/;"	r
+backgroundColor	App.js	/^    backgroundColor: colors.grey,$/;"	r
+blue	src/styles/base.js	/^  blue: '#0365d0',$/;"	r
+container	App.js	/^  container: {$/;"	r
+darkGrey	src/styles/base.js	/^  darkGrey: '#626262',$/;"	r
+description	src/sampleDB/repositories.js	/^    description: 'Build forms in React, without the tears',$/;"	r
+description	src/sampleDB/repositories.js	/^    description: 'Predictable state container for JavaScript apps',$/;"	r
+description	src/sampleDB/repositories.js	/^    description: 'Ruby on Rails',$/;"	r
+description	src/sampleDB/repositories.js	/^    description: 'The Web framework for perfectionists with deadlines.',$/;"	r
+exports	babel.config.js	/^module.exports = function(api) {$/;"	r
+flex	App.js	/^    flex: 1,$/;"	r
+forksCount	src/sampleDB/repositories.js	/^    forksCount: 13902,$/;"	r
+forksCount	src/sampleDB/repositories.js	/^    forksCount: 1589,$/;"	r
+forksCount	src/sampleDB/repositories.js	/^    forksCount: 18349,$/;"	r
+forksCount	src/sampleDB/repositories.js	/^    forksCount: 21015,$/;"	r
+fullName	src/sampleDB/repositories.js	/^    fullName: 'django\/django',$/;"	r
+fullName	src/sampleDB/repositories.js	/^    fullName: 'jaredpalmer\/formik',$/;"	r
+fullName	src/sampleDB/repositories.js	/^    fullName: 'rails\/rails',$/;"	r
+fullName	src/sampleDB/repositories.js	/^    fullName: 'reduxjs\/redux',$/;"	r
+grey	src/styles/base.js	/^  grey: '#e1e5e8',$/;"	r
+id	src/sampleDB/repositories.js	/^    id: 'django.django',$/;"	r
+id	src/sampleDB/repositories.js	/^    id: 'jaredpalmer.formik',$/;"	r
+id	src/sampleDB/repositories.js	/^    id: 'rails.rails',$/;"	r
+id	src/sampleDB/repositories.js	/^    id: 'reduxjs.redux',$/;"	r
+language	src/sampleDB/repositories.js	/^    language: 'Python',$/;"	r
+language	src/sampleDB/repositories.js	/^    language: 'Ruby',$/;"	r
+language	src/sampleDB/repositories.js	/^    language: 'TypeScript',$/;"	r
+lightBlack	src/styles/base.js	/^  lightBlack: '#24292e',$/;"	r
+ownerAvatarUrl	src/sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars1.githubusercontent.com\/u\/4223?v=4',$/;"	r
+ownerAvatarUrl	src/sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars2.githubusercontent.com\/u\/27804?v=4',$/;"	r
+ownerAvatarUrl	src/sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars2.githubusercontent.com\/u\/4060187?v=4',$/;"	r
+ownerAvatarUrl	src/sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars3.githubusercontent.com\/u\/13142323?v=4',$/;"	r
+presets	babel.config.js	/^    presets: ['babel-preset-expo'],$/;"	r
+ratingAverage	src/sampleDB/repositories.js	/^    ratingAverage: 0,$/;"	r
+ratingAverage	src/sampleDB/repositories.js	/^    ratingAverage: 100,$/;"	r
+ratingAverage	src/sampleDB/repositories.js	/^    ratingAverage: 73,$/;"	r
+ratingAverage	src/sampleDB/repositories.js	/^    ratingAverage: 88,$/;"	r
+reviewCount	src/sampleDB/repositories.js	/^    reviewCount: 0,$/;"	r
+reviewCount	src/sampleDB/repositories.js	/^    reviewCount: 2,$/;"	r
+reviewCount	src/sampleDB/repositories.js	/^    reviewCount: 4,$/;"	r
+reviewCount	src/sampleDB/repositories.js	/^    reviewCount: 5,$/;"	r
+stargazersCount	src/sampleDB/repositories.js	/^    stargazersCount: 21553,$/;"	r
+stargazersCount	src/sampleDB/repositories.js	/^    stargazersCount: 45377,$/;"	r
+stargazersCount	src/sampleDB/repositories.js	/^    stargazersCount: 48496,$/;"	r
+stargazersCount	src/sampleDB/repositories.js	/^    stargazersCount: 52869,$/;"	r
+white	src/styles/base.js	/^  white: '#ffffff',$/;"	r
