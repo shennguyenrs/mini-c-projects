@@ -3,25 +3,15 @@ import PropTypes from 'prop-types';
 import { View, StyleSheet, Text, Pressable } from 'react-native';
 import { Link, useLocation } from 'react-router-native';
 
-import { colors } from '../styles/base';
+import { colors, appBar } from '../styles/base';
 
 const styles = StyleSheet.create({
-  container: {
-    paddingBottom: 20,
-    paddingTop: 40,
-    paddingLeft: 10,
-    paddingRight: 10,
-    backgroundColor: colors.lightBlack,
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
   link: {
-    fontSize: 18,
-    fontWeight: 'bold',
+    fontSize: 20,
   },
   __active: {
     color: colors.white,
+    fontWeight: 'bold',
   },
   __notActive: {
     color: colors.darkGrey,
@@ -47,7 +37,7 @@ const NavigationLink = ({ path, children }) => {
 
 const AppBar = () => {
   return (
-    <View style={styles.container}>
+    <View style={appBar.container}>
       <Pressable>
         <Link to="/" underlayColor={colors.lightBlack}>
           <NavigationLink path="/">Repositories</NavigationLink>

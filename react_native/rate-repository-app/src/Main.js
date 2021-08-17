@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, SafeAreaView } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { Switch, Route, Redirect } from 'react-router-native';
 
 // Import components
@@ -18,15 +18,13 @@ const styles = StyleSheet.create({
 
 export default function Main() {
   return (
-    <SafeAreaView>
-      <View style={styles.container}>
-        <AppBar />
-        <Switch>
-          <Route exact path="/" component={RepositoriesList} />
-          <Route path="/sign-in" component={SignInForm} />
-          <Redirect to="/" />
-        </Switch>
-      </View>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <AppBar />
+      <Switch>
+        <Route exact path="/" component={RepositoriesList} />
+        <Route path="/sign-in" component={SignInForm} />
+        <Redirect to="/" />
+      </Switch>
+    </View>
   );
 }

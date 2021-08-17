@@ -12,7 +12,14 @@ const styles = StyleSheet.create({
     marginRight: 8,
     backgroundColor: colors.white,
     borderRadius: 8,
-    boxShadow: '5px 5px 8px rgba(0, 0, 0, .2)',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.32,
+    shadowRadius: 6,
+    elevation: 10,
   },
   infoContainer: {
     flex: 1,
@@ -21,7 +28,7 @@ const styles = StyleSheet.create({
   },
   inforContainer__onright: {
     marginLeft: 20,
-    maxWidth: '80%',
+    maxWidth: '75%',
   },
   avatar: {
     height: 60,

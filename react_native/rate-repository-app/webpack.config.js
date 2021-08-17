@@ -5,7 +5,7 @@ module.exports = async function (env, argv) {
   const config = await createExpoWwebPackConfigAsync(env, argv);
 
   config.module.rules.push({
-    test: /\.js$/,
+    test: [/\.js$/, /\.ts$/],
     loader: 'babel-loader',
     include: [path.join(__dirname, 'node_modules/react-router-native')],
   });

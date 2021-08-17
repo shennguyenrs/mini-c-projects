@@ -5,12 +5,13 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 App	App.js	/^export default function App() {$/;"	r
-Main	src/main.js	/^export default function Main() {$/;"	r
-Route	src/main.js	/^import { Switch, Route, Redirect } from 'react-router-native';$/;"	r
-StyleSheet	src/main.js	/^import { View, StyleSheet, SafeAreaView } from 'react-native';$/;"	r
-backgroundColor	src/main.js	/^    backgroundColor: colors.grey,$/;"	r
+Main	src/Main.js	/^export default function Main() {$/;"	r
+Route	src/Main.js	/^import { Switch, Route, Redirect } from 'react-router-native';$/;"	r
+backgroundColor	src/Main.js	/^    backgroundColor: colors.grey,$/;"	r
+backgroundColor	src/styles/base.js	/^    backgroundColor: colors.lightBlack,$/;"	r
 blue	src/styles/base.js	/^  blue: '#0365d0',$/;"	r
-container	src/main.js	/^  container: {$/;"	r
+container	src/Main.js	/^  container: {$/;"	r
+container	src/styles/base.js	/^  container: {$/;"	r
 darkGrey	src/styles/base.js	/^  darkGrey: '#626262',$/;"	r
 description	src/sampleDB/repositories.js	/^    description: 'Build forms in React, without the tears',$/;"	r
 description	src/sampleDB/repositories.js	/^    description: 'Predictable state container for JavaScript apps',$/;"	r
@@ -18,7 +19,9 @@ description	src/sampleDB/repositories.js	/^    description: 'Ruby on Rails',$/;"
 description	src/sampleDB/repositories.js	/^    description: 'The Web framework for perfectionists with deadlines.',$/;"	r
 exports	babel.config.js	/^module.exports = function(api) {$/;"	r
 exports	webpack.config.js	/^module.exports = async function (env, argv) {$/;"	r
-flex	src/main.js	/^    flex: 1,$/;"	r
+flex	src/Main.js	/^    flex: 1,$/;"	r
+flex	src/styles/base.js	/^    flex: 1,$/;"	r
+flexDirection	src/styles/base.js	/^    flexDirection: 'row',$/;"	r
 forksCount	src/sampleDB/repositories.js	/^    forksCount: 13902,$/;"	r
 forksCount	src/sampleDB/repositories.js	/^    forksCount: 1589,$/;"	r
 forksCount	src/sampleDB/repositories.js	/^    forksCount: 18349,$/;"	r
@@ -33,15 +36,23 @@ id	src/sampleDB/repositories.js	/^    id: 'jaredpalmer.formik',$/;"	r
 id	src/sampleDB/repositories.js	/^    id: 'rails.rails',$/;"	r
 id	src/sampleDB/repositories.js	/^    id: 'reduxjs.redux',$/;"	r
 include	webpack.config.js	/^    include: [path.join(__dirname, 'node_modules\/react-router-native')],$/;"	r
+justifyContent	src/styles/base.js	/^    justifyContent: 'space-evenly',$/;"	r
 language	src/sampleDB/repositories.js	/^    language: 'Python',$/;"	r
 language	src/sampleDB/repositories.js	/^    language: 'Ruby',$/;"	r
 language	src/sampleDB/repositories.js	/^    language: 'TypeScript',$/;"	r
 lightBlack	src/styles/base.js	/^  lightBlack: '#24292e',$/;"	r
 loader	webpack.config.js	/^    loader: 'babel-loader',$/;"	r
+marginTop	src/styles/base.js	/^    marginTop: appBar.container.paddingTop + 40,$/;"	r
 ownerAvatarUrl	src/sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars1.githubusercontent.com\/u\/4223?v=4',$/;"	r
 ownerAvatarUrl	src/sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars2.githubusercontent.com\/u\/27804?v=4',$/;"	r
 ownerAvatarUrl	src/sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars2.githubusercontent.com\/u\/4060187?v=4',$/;"	r
 ownerAvatarUrl	src/sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars3.githubusercontent.com\/u\/13142323?v=4',$/;"	r
+paddingBottom	src/styles/base.js	/^    paddingBottom: 20,$/;"	r
+paddingLeft	src/styles/base.js	/^    paddingLeft: 10,$/;"	r
+paddingRight	src/styles/base.js	/^    paddingRight: 10,$/;"	r
+paddingTop	src/styles/base.js	/^    paddingTop: 40,$/;"	r
+position	src/styles/base.js	/^    position: 'absolute',$/;"	r
+position	src/styles/base.js	/^    position: 'relative',$/;"	r
 presets	babel.config.js	/^    presets: ['babel-preset-expo'],$/;"	r
 ratingAverage	src/sampleDB/repositories.js	/^    ratingAverage: 0,$/;"	r
 ratingAverage	src/sampleDB/repositories.js	/^    ratingAverage: 100,$/;"	r
@@ -55,5 +66,8 @@ stargazersCount	src/sampleDB/repositories.js	/^    stargazersCount: 21553,$/;"	r
 stargazersCount	src/sampleDB/repositories.js	/^    stargazersCount: 45377,$/;"	r
 stargazersCount	src/sampleDB/repositories.js	/^    stargazersCount: 48496,$/;"	r
 stargazersCount	src/sampleDB/repositories.js	/^    stargazersCount: 52869,$/;"	r
-test	webpack.config.js	/^    test: \/\\.js$\/,$/;"	r
-white	src/styles/base.js	/^  white: '#ffffff',$/;"	r
+test	webpack.config.js	/^    test: [\/\\.js$\/, \/\\.ts$\/],$/;"	r
+white	src/styles/base.js	/^  white: '#fff',$/;"	r
+width	src/styles/base.js	/^    width: '100%',$/;"	r
+zIndex	src/styles/base.js	/^    zIndex: 1,$/;"	r
+zIndex	src/styles/base.js	/^    zIndex: appBar.container.zIndex - 1,$/;"	r
