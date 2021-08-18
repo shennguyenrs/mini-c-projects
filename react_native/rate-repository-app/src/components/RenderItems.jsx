@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { View, Text, StyleSheet, Image } from 'react-native';
 
-import { colors } from '../styles/base';
+import { colors, shadow } from '../styles/base';
 
 const styles = StyleSheet.create({
   container: {
@@ -12,14 +11,6 @@ const styles = StyleSheet.create({
     marginRight: 8,
     backgroundColor: colors.white,
     borderRadius: 8,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.32,
-    shadowRadius: 6,
-    elevation: 10,
   },
   infoContainer: {
     flex: 1,
@@ -100,7 +91,7 @@ const statisticsContainer = (number, tag) => {
 
 const RenderItems = ({ item }) => {
   return (
-    <View style={styles.container}>
+    <View style={[shadow.shadow, styles.container]}>
       <View style={styles.infoContainer}>
         <Image style={styles.avatar} source={{ uri: item.ownerAvatarUrl }} />
         {infoContainer(item)}
@@ -116,8 +107,3 @@ const RenderItems = ({ item }) => {
 };
 
 export default RenderItems;
-
-// Props Validation
-RenderItems.propTypes = {
-  item: PropTypes.array,
-};

@@ -26,8 +26,21 @@ export const appBar = StyleSheet.create({
 
 export const view = StyleSheet.create({
   container: {
-    position: 'relative',
+    /* position: 'relative',
     zIndex: appBar.container.zIndex - 1,
-    marginTop: appBar.container.paddingTop + 40,
+    marginTop: appBar.container.paddingTop + 40, */
+  },
+});
+
+export const shadow = StyleSheet.create({
+  shadow: {
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.32,
+    shadowRadius: 6,
+    elevation: 10,
   },
 });
