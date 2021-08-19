@@ -7,8 +7,11 @@ import {
   Pressable,
   ActivityIndicator,
 } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 import { colors, view, shadow } from '../styles/base';
+
+import Form from '../components/Form';
 
 const styles = StyleSheet.create({
   constainer: {
@@ -25,13 +28,18 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   button: {
+    flex: 1,
+    flexDirection: 'row',
     marginTop: 10,
     fontWeight: 'bold',
-    color: colors.white,
     backgroundColor: colors.blue,
     paddingHorizontal: 60,
     paddingVertical: 10,
     borderRadius: 30,
+  },
+  buttonText: {
+    color: colors.white,
+    marginLeft: 5,
   },
   loading: {
     flexDirection: 'row',
@@ -81,7 +89,10 @@ const SignInForm = ({ navigation }) => {
         onChangeText={(text) => setPw(text)}
       />
       <Pressable onPress={handleSubmit}>
-        <Text style={[shadow.shadow, styles.button]}>Sign in</Text>
+        <View style={[shadow.shadow, styles.button]}>
+          <Ionicons name="log-in-outline" color={colors.white} size={18} />
+          <Text style={styles.buttonText}>Sign in</Text>
+        </View>
       </Pressable>
       {isLoading ? (
         <View style={[styles.loading]}>
@@ -89,6 +100,7 @@ const SignInForm = ({ navigation }) => {
           <Text style={styles.loadingText}>Loading...</Text>
         </View>
       ) : null}
+      <Form />
     </View>
   );
 };
