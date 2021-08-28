@@ -1,0 +1,85 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+NODE_ENV	utils/config.js	/^  process.env.NODE_ENV === 'test'$/;"	r
+allRepositories	apollo/typeDefs.js	/^    allRepositories: [Repositories]!$/;"	r
+countRepositories	apollo/typeDefs.js	/^    countRepositories: Int!$/;"	r
+description	apollo/typeDefs.js	/^    description: String!$/;"	r
+description	models/Repository.js	/^  description: {$/;"	r
+description	sampleDB/repositories.js	/^    description: 'Build forms in React, without the tears',$/;"	r
+description	sampleDB/repositories.js	/^    description: 'Predictable state container for JavaScript apps',$/;"	r
+description	sampleDB/repositories.js	/^    description: 'Ruby on Rails',$/;"	r
+description	sampleDB/repositories.js	/^    description: 'The Web framework for perfectionists with deadlines.',$/;"	r
+exports	apollo/server.js	/^module.exports = server;$/;"	r
+exports	apollo/typeDefs.js	/^module.exports = typeDefs;$/;"	r
+exports	app.js	/^module.exports = app;$/;"	r
+exports	models/Repository.js	/^module.exports = connection.model('Repository', schema);$/;"	r
+exports	resolvers/query.js	/^module.exports = queries;$/;"	r
+exports	utils/config.js	/^module.exports = { MONGO_URI, SERECT_KEY };$/;"	r
+exports	utils/connection.js	/^module.exports = db;$/;"	r
+forksCount	apollo/typeDefs.js	/^    forksCount: Int!$/;"	r
+forksCount	models/Repository.js	/^  forksCount: {$/;"	r
+forksCount	sampleDB/repositories.js	/^    forksCount: 13902,$/;"	r
+forksCount	sampleDB/repositories.js	/^    forksCount: 1589,$/;"	r
+forksCount	sampleDB/repositories.js	/^    forksCount: 18349,$/;"	r
+forksCount	sampleDB/repositories.js	/^    forksCount: 21015,$/;"	r
+fullName	apollo/typeDefs.js	/^    fullName: String!$/;"	r
+fullName	sampleDB/repositories.js	/^    fullName: 'django\/django',$/;"	r
+fullName	sampleDB/repositories.js	/^    fullName: 'jaredpalmer\/formik',$/;"	r
+fullName	sampleDB/repositories.js	/^    fullName: 'rails\/rails',$/;"	r
+fullName	sampleDB/repositories.js	/^    fullName: 'reduxjs\/redux',$/;"	r
+fullname	models/Repository.js	/^  fullname: {$/;"	r
+id	apollo/typeDefs.js	/^    id: ID!$/;"	r
+id	apollo/typeDefs.js	/^    id: String!$/;"	r
+id	models/Repository.js	/^  id: {$/;"	r
+id	sampleDB/repositories.js	/^    id: 'django.django',$/;"	r
+id	sampleDB/repositories.js	/^    id: 'jaredpalmer.formik',$/;"	r
+id	sampleDB/repositories.js	/^    id: 'rails.rails',$/;"	r
+id	sampleDB/repositories.js	/^    id: 'reduxjs.redux',$/;"	r
+language	apollo/typeDefs.js	/^    language: String!$/;"	r
+language	models/Repository.js	/^  language: {$/;"	r
+language	sampleDB/repositories.js	/^    language: 'Python',$/;"	r
+language	sampleDB/repositories.js	/^    language: 'Ruby',$/;"	r
+language	sampleDB/repositories.js	/^    language: 'TypeScript',$/;"	r
+me	apollo/typeDefs.js	/^    me: User!$/;"	r
+ownerAvatarUrl	apollo/typeDefs.js	/^    ownerAvatarUrl: String!$/;"	r
+ownerAvatarUrl	models/Repository.js	/^  ownerAvatarUrl: { type: Number, require: true },$/;"	r
+ownerAvatarUrl	sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars1.githubusercontent.com\/u\/4223?v=4',$/;"	r
+ownerAvatarUrl	sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars2.githubusercontent.com\/u\/27804?v=4',$/;"	r
+ownerAvatarUrl	sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars2.githubusercontent.com\/u\/4060187?v=4',$/;"	r
+ownerAvatarUrl	sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars3.githubusercontent.com\/u\/13142323?v=4',$/;"	r
+password	apollo/typeDefs.js	/^    login(username: String!, password: String!): Token$/;"	r
+password	apollo/typeDefs.js	/^    password: String!$/;"	r
+ratingAverage	sampleDB/repositories.js	/^    ratingAverage: 0,$/;"	r
+ratingAverage	sampleDB/repositories.js	/^    ratingAverage: 100,$/;"	r
+ratingAverage	sampleDB/repositories.js	/^    ratingAverage: 73,$/;"	r
+ratingAverage	sampleDB/repositories.js	/^    ratingAverage: 88,$/;"	r
+require	models/Repository.js	/^    require: true,$/;"	r
+require	models/Repository.js	/^  ownerAvatarUrl: { type: Number, require: true },$/;"	r
+require	models/Repository.js	/^  reviewCount: { type: Number, require: true },$/;"	r
+require	models/Repository.js	/^  stargazersCount: { type: Number, require: true },$/;"	r
+resolvers	apollo/server.js	/^  resolvers,$/;"	r
+reviewCount	apollo/typeDefs.js	/^    reviewCount: Int!$/;"	r
+reviewCount	models/Repository.js	/^  reviewCount: { type: Number, require: true },$/;"	r
+reviewCount	sampleDB/repositories.js	/^    reviewCount: 0,$/;"	r
+reviewCount	sampleDB/repositories.js	/^    reviewCount: 2,$/;"	r
+reviewCount	sampleDB/repositories.js	/^    reviewCount: 4,$/;"	r
+reviewCount	sampleDB/repositories.js	/^    reviewCount: 5,$/;"	r
+stargazersCount	apollo/typeDefs.js	/^    stargazersCount: Int!$/;"	r
+stargazersCount	models/Repository.js	/^  stargazersCount: { type: Number, require: true },$/;"	r
+stargazersCount	sampleDB/repositories.js	/^    stargazersCount: 21553,$/;"	r
+stargazersCount	sampleDB/repositories.js	/^    stargazersCount: 45377,$/;"	r
+stargazersCount	sampleDB/repositories.js	/^    stargazersCount: 48496,$/;"	r
+stargazersCount	sampleDB/repositories.js	/^    stargazersCount: 52869,$/;"	r
+type	models/Repository.js	/^    type: Number,$/;"	r
+type	models/Repository.js	/^    type: String,$/;"	r
+typeDefs	apollo/server.js	/^  typeDefs,$/;"	r
+useCreateIndex	utils/connection.js	/^  useCreateIndex: true,$/;"	r
+useFindAndModify	utils/connection.js	/^  useFindAndModify: false,$/;"	r
+useNewUrlParser	utils/connection.js	/^  useNewUrlParser: true,$/;"	r
+useUnifiedTopology	utils/connection.js	/^  useUnifiedTopology: true,$/;"	r
+username	apollo/typeDefs.js	/^    username: String!$/;"	r
+value	apollo/typeDefs.js	/^    value: String!$/;"	r
