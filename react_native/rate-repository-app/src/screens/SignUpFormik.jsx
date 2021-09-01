@@ -42,18 +42,21 @@ const styles = StyleSheet.create({
   },
 });
 
-const signInValidation = Yup.object().shape({
+const signUpValidation = Yup.object().shape({
   email: Yup.string().required('Required').email('Invalid email'),
   password: Yup.string()
     .required('Required')
     .min(8, 'Too short password')
     .max(16, 'Too long password'),
+  confirmPass: Yup.string()
+    .required('Required')
+    .oneOf([Yup.ref('password'), null], 'Password must match'),
 });
 
-const SignInFormik = ({ navigation }) => (
+const SignUpFormik = ({ navigation }) => (
   <Formik
-    initialValues={{ email: '', password: '' }}
-    validationSchema={signInValidation}
+    initialValues={{ email: '', password: '', confirmPass: '' }}
+    validationSchema={signUpValidation}
     onSubmit={(values, actions) => {
       console.log(values);
 
@@ -61,6 +64,7 @@ const SignInFormik = ({ navigation }) => (
       actions.resetForm({
         email: '',
         password: '',
+        confirmPass: '',
       });
 
       // Navigate back to repositories
@@ -88,15 +92,25 @@ const SignInFormik = ({ navigation }) => (
         {errors.password && touched.password ? (
           <Text style={styles.errorMessage}>{errors.password}</Text>
         ) : null}
+        <TextInput
+          style={[styles.input, shadow.shadow]}
+          placeholder="Confirm password"
+          onChangeText={handleChange('confirmPass')}
+          value={values.confirmPass}
+          secureTextEntry={true}
+        />
+        {errors.confirmPass && touched.confirmPass ? (
+          <Text style={styles.errorMessage}>{errors.confirmPass}</Text>
+        ) : null}
         <Pressable
           onPress={handleSubmit}
           style={[styles.button, shadow.shadow]}
         >
-          <Text style={[styles.buttonText]}>Sign In</Text>
+          <Text style={[styles.buttonText]}>Sign Up</Text>
         </Pressable>
       </View>
     )}
   </Formik>
 );
 
-export default SignInFormik;
+export default SignUpFormik;

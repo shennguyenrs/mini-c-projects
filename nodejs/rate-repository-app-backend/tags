@@ -4,20 +4,30 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Mutation	apollo/server.js	/^  Mutation: mutations,$/;"	r
 NODE_ENV	utils/config.js	/^  process.env.NODE_ENV === 'test'$/;"	r
+Query	apollo/server.js	/^  Query: queries,$/;"	r
+_args	resolvers/queries.js	/^  me: (_root, _args, context) => context.currentUser,$/;"	r
 allRepositories	apollo/typeDefs.js	/^    allRepositories: [Repositories]!$/;"	r
 countRepositories	apollo/typeDefs.js	/^    countRepositories: Int!$/;"	r
+createUser	resolvers/mutations.js	/^  createUser: (root, args) => createUser(root, args),$/;"	r
 description	apollo/typeDefs.js	/^    description: String!$/;"	r
 description	models/Repository.js	/^  description: {$/;"	r
 description	sampleDB/repositories.js	/^    description: 'Build forms in React, without the tears',$/;"	r
 description	sampleDB/repositories.js	/^    description: 'Predictable state container for JavaScript apps',$/;"	r
 description	sampleDB/repositories.js	/^    description: 'Ruby on Rails',$/;"	r
 description	sampleDB/repositories.js	/^    description: 'The Web framework for perfectionists with deadlines.',$/;"	r
+description	utils/addSamples.js	/^        description: item.description,$/;"	r
 exports	apollo/server.js	/^module.exports = server;$/;"	r
 exports	apollo/typeDefs.js	/^module.exports = typeDefs;$/;"	r
 exports	app.js	/^module.exports = app;$/;"	r
 exports	models/Repository.js	/^module.exports = connection.model('Repository', schema);$/;"	r
-exports	resolvers/query.js	/^module.exports = queries;$/;"	r
+exports	models/User.js	/^module.exports = connection.model('User', schema);$/;"	r
+exports	resolvers/mutations.js	/^module.exports = mutations;$/;"	r
+exports	resolvers/queries.js	/^module.exports = queries;$/;"	r
+exports	sampleDB/repositories.js	/^module.exports = repositories;$/;"	r
+exports	utils/addSamples.js	/^module.exports = { addRepos };$/;"	r
+exports	utils/cleanSamples.js	/^module.exports = { cleanSamples };$/;"	r
 exports	utils/config.js	/^module.exports = { MONGO_URI, SERECT_KEY };$/;"	r
 exports	utils/connection.js	/^module.exports = db;$/;"	r
 forksCount	apollo/typeDefs.js	/^    forksCount: Int!$/;"	r
@@ -26,41 +36,57 @@ forksCount	sampleDB/repositories.js	/^    forksCount: 13902,$/;"	r
 forksCount	sampleDB/repositories.js	/^    forksCount: 1589,$/;"	r
 forksCount	sampleDB/repositories.js	/^    forksCount: 18349,$/;"	r
 forksCount	sampleDB/repositories.js	/^    forksCount: 21015,$/;"	r
-fullName	apollo/typeDefs.js	/^    fullName: String!$/;"	r
+forksCount	utils/addSamples.js	/^        forksCount: item.forksCount,$/;"	r
 fullName	sampleDB/repositories.js	/^    fullName: 'django\/django',$/;"	r
 fullName	sampleDB/repositories.js	/^    fullName: 'jaredpalmer\/formik',$/;"	r
 fullName	sampleDB/repositories.js	/^    fullName: 'rails\/rails',$/;"	r
 fullName	sampleDB/repositories.js	/^    fullName: 'reduxjs\/redux',$/;"	r
+fullname	apollo/typeDefs.js	/^    fullname: String!$/;"	r
 fullname	models/Repository.js	/^  fullname: {$/;"	r
+fullname	utils/addSamples.js	/^        fullname: item.fullName,$/;"	r
 id	apollo/typeDefs.js	/^    id: ID!$/;"	r
 id	apollo/typeDefs.js	/^    id: String!$/;"	r
 id	models/Repository.js	/^  id: {$/;"	r
+id	resolvers/mutations.js	/^    id: foundUser._id,$/;"	r
+id	resolvers/mutations.js	/^    id: savedUser._id,$/;"	r
 id	sampleDB/repositories.js	/^    id: 'django.django',$/;"	r
 id	sampleDB/repositories.js	/^    id: 'jaredpalmer.formik',$/;"	r
 id	sampleDB/repositories.js	/^    id: 'rails.rails',$/;"	r
 id	sampleDB/repositories.js	/^    id: 'reduxjs.redux',$/;"	r
+id	utils/addSamples.js	/^        id: item.id,$/;"	r
 language	apollo/typeDefs.js	/^    language: String!$/;"	r
 language	models/Repository.js	/^  language: {$/;"	r
 language	sampleDB/repositories.js	/^    language: 'Python',$/;"	r
 language	sampleDB/repositories.js	/^    language: 'Ruby',$/;"	r
 language	sampleDB/repositories.js	/^    language: 'TypeScript',$/;"	r
-me	apollo/typeDefs.js	/^    me: User!$/;"	r
+language	utils/addSamples.js	/^        language: item.language,$/;"	r
+login	resolvers/mutations.js	/^  login: (root, args) => login(root, args),$/;"	r
+me	resolvers/queries.js	/^  me: (_root, _args, context) => context.currentUser,$/;"	r
 ownerAvatarUrl	apollo/typeDefs.js	/^    ownerAvatarUrl: String!$/;"	r
-ownerAvatarUrl	models/Repository.js	/^  ownerAvatarUrl: { type: Number, require: true },$/;"	r
+ownerAvatarUrl	models/Repository.js	/^  ownerAvatarUrl: { type: String, require: true },$/;"	r
 ownerAvatarUrl	sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars1.githubusercontent.com\/u\/4223?v=4',$/;"	r
 ownerAvatarUrl	sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars2.githubusercontent.com\/u\/27804?v=4',$/;"	r
 ownerAvatarUrl	sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars2.githubusercontent.com\/u\/4060187?v=4',$/;"	r
 ownerAvatarUrl	sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars3.githubusercontent.com\/u\/13142323?v=4',$/;"	r
+ownerAvatarUrl	utils/addSamples.js	/^        ownerAvatarUrl: item.ownerAvatarUrl,$/;"	r
+password	apollo/typeDefs.js	/^    createUser(username: String!, password: String!): Token$/;"	r
 password	apollo/typeDefs.js	/^    login(username: String!, password: String!): Token$/;"	r
 password	apollo/typeDefs.js	/^    password: String!$/;"	r
+password	models/User.js	/^  password: {$/;"	r
+password	resolvers/mutations.js	/^    password: hashPW,$/;"	r
+ratingAverage	apollo/typeDefs.js	/^    ratingAverage: Int!$/;"	r
+ratingAverage	models/Repository.js	/^  ratingAverage: { type: Number, require: true },$/;"	r
 ratingAverage	sampleDB/repositories.js	/^    ratingAverage: 0,$/;"	r
 ratingAverage	sampleDB/repositories.js	/^    ratingAverage: 100,$/;"	r
 ratingAverage	sampleDB/repositories.js	/^    ratingAverage: 73,$/;"	r
 ratingAverage	sampleDB/repositories.js	/^    ratingAverage: 88,$/;"	r
+ratingAverage	utils/addSamples.js	/^        ratingAverage: item.ratingAverage,$/;"	r
 require	models/Repository.js	/^    require: true,$/;"	r
-require	models/Repository.js	/^  ownerAvatarUrl: { type: Number, require: true },$/;"	r
+require	models/Repository.js	/^  ownerAvatarUrl: { type: String, require: true },$/;"	r
+require	models/Repository.js	/^  ratingAverage: { type: Number, require: true },$/;"	r
 require	models/Repository.js	/^  reviewCount: { type: Number, require: true },$/;"	r
 require	models/Repository.js	/^  stargazersCount: { type: Number, require: true },$/;"	r
+require	models/User.js	/^    require: true,$/;"	r
 resolvers	apollo/server.js	/^  resolvers,$/;"	r
 reviewCount	apollo/typeDefs.js	/^    reviewCount: Int!$/;"	r
 reviewCount	models/Repository.js	/^  reviewCount: { type: Number, require: true },$/;"	r
@@ -68,18 +94,27 @@ reviewCount	sampleDB/repositories.js	/^    reviewCount: 0,$/;"	r
 reviewCount	sampleDB/repositories.js	/^    reviewCount: 2,$/;"	r
 reviewCount	sampleDB/repositories.js	/^    reviewCount: 4,$/;"	r
 reviewCount	sampleDB/repositories.js	/^    reviewCount: 5,$/;"	r
+reviewCount	utils/addSamples.js	/^        reviewCount: item.reviewCount,$/;"	r
 stargazersCount	apollo/typeDefs.js	/^    stargazersCount: Int!$/;"	r
 stargazersCount	models/Repository.js	/^  stargazersCount: { type: Number, require: true },$/;"	r
 stargazersCount	sampleDB/repositories.js	/^    stargazersCount: 21553,$/;"	r
 stargazersCount	sampleDB/repositories.js	/^    stargazersCount: 45377,$/;"	r
 stargazersCount	sampleDB/repositories.js	/^    stargazersCount: 48496,$/;"	r
 stargazersCount	sampleDB/repositories.js	/^    stargazersCount: 52869,$/;"	r
+stargazersCount	utils/addSamples.js	/^        stargazersCount: item.stargazersCount,$/;"	r
 type	models/Repository.js	/^    type: Number,$/;"	r
 type	models/Repository.js	/^    type: String,$/;"	r
+type	models/User.js	/^    type: String,$/;"	r
 typeDefs	apollo/server.js	/^  typeDefs,$/;"	r
+unique	models/Repository.js	/^    unique: true,$/;"	r
+unique	models/User.js	/^    unique: true,$/;"	r
 useCreateIndex	utils/connection.js	/^  useCreateIndex: true,$/;"	r
 useFindAndModify	utils/connection.js	/^  useFindAndModify: false,$/;"	r
 useNewUrlParser	utils/connection.js	/^  useNewUrlParser: true,$/;"	r
 useUnifiedTopology	utils/connection.js	/^  useUnifiedTopology: true,$/;"	r
 username	apollo/typeDefs.js	/^    username: String!$/;"	r
+username	models/User.js	/^  username: {$/;"	r
+username	resolvers/mutations.js	/^    username: args.username,$/;"	r
+username	resolvers/mutations.js	/^    username: foundUser.username,$/;"	r
+username	resolvers/mutations.js	/^    username: savedUser.username,$/;"	r
 value	apollo/typeDefs.js	/^    value: String!$/;"	r

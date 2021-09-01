@@ -6,8 +6,10 @@ import { Ionicons } from '@expo/vector-icons';
 
 // Import components
 import RepositoriesList from './screens/RepositoriesList';
+// Old form
 // import SignInForm from './screens/SignInForm';
 import SignInFormik from './screens/SignInFormik';
+import SignUpFormik from './screens/SignUpFormik';
 
 import { colors } from './styles/base';
 
@@ -33,6 +35,8 @@ export default function Main() {
                 iconName = focused ? 'albums' : 'albums-outline';
               } else if (route.name === 'Sign In') {
                 iconName = focused ? 'person-circle' : 'person-circle-outline';
+              } else if (route.name === 'Sign Up') {
+                iconName = focused ? 'person-add' : 'person-add-outline';
               }
 
               return <Ionicons name={iconName} size={size} color={color} />;
@@ -47,6 +51,7 @@ export default function Main() {
         >
           <Tab.Screen name="Repositories" component={RepositoriesList} />
           <Tab.Screen name="Sign In" component={SignInFormik} />
+          <Tab.Screen name="Sign Up" component={SignUpFormik} />
         </Tab.Navigator>
       </View>
     </NavigationContainer>

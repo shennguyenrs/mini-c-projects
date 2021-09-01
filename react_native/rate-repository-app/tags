@@ -5,14 +5,24 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 App	App.js	/^export default function App() {$/;"	r
+BACKEND_URI	app.config.js	/^    BACKEND_URI: process.env.BACKEND_URI,$/;"	r
+InMemoryCache	src/utils/apolloClient.js	/^import { ApolloClient, InMemoryCache, createHttpLink } from '@apollo\/client';$/;"	r
 Main	src/Main.js	/^export default function Main() {$/;"	r
+adaptiveIcon	app.config.js	/^    adaptiveIcon: {$/;"	r
+android	app.config.js	/^  android: {$/;"	r
+assetBundlePatterns	app.config.js	/^  assetBundlePatterns: ['**\/*'],$/;"	r
+authorization	src/utils/apolloClient.js	/^          authorization: token ? `bearer ${token}` : '',$/;"	r
+backgroundColor	app.config.js	/^      backgroundColor: '#FFFFFF',$/;"	r
+backgroundColor	app.config.js	/^    backgroundColor: '#ffffff',$/;"	r
 backgroundColor	src/Main.js	/^    backgroundColor: colors.grey,$/;"	r
 backgroundColor	src/styles/base.js	/^    backgroundColor: colors.lightBlack,$/;"	r
 blue	src/styles/base.js	/^  blue: '#0365d0',$/;"	r
+cache	src/utils/apolloClient.js	/^    cache: cache,$/;"	r
 color	src/Main.js	/^            tabBarIcon: ({ focused, color, size }) => {$/;"	r
 container	src/Main.js	/^  container: {$/;"	r
 container	src/styles/base.js	/^  container: {$/;"	r
 darkGrey	src/styles/base.js	/^  darkGrey: '#626262',$/;"	r
+description	src/graphql/queries.js	/^      description$/;"	r
 description	src/sampleDB/repositories.js	/^    description: 'Build forms in React, without the tears',$/;"	r
 description	src/sampleDB/repositories.js	/^    description: 'Predictable state container for JavaScript apps',$/;"	r
 description	src/sampleDB/repositories.js	/^    description: 'Ruby on Rails',$/;"	r
@@ -20,9 +30,14 @@ description	src/sampleDB/repositories.js	/^    description: 'The Web framework f
 elevation	src/styles/base.js	/^    elevation: 10,$/;"	r
 error	src/styles/base.js	/^  error: '#FE5F55',$/;"	r
 exports	babel.config.js	/^module.exports = function(api) {$/;"	r
+extra	app.config.js	/^  extra: {$/;"	r
+fallbackToCacheTimeout	app.config.js	/^    fallbackToCacheTimeout: 0,$/;"	r
+favicon	app.config.js	/^    favicon: '.\/assets\/favicon.png',$/;"	r
 flex	src/Main.js	/^    flex: 1,$/;"	r
 flex	src/styles/base.js	/^    flex: 1,$/;"	r
 flexDirection	src/styles/base.js	/^    flexDirection: 'row',$/;"	r
+foregroundImage	app.config.js	/^      foregroundImage: '.\/assets\/adaptive-icon.png',$/;"	r
+forksCount	src/graphql/queries.js	/^      forksCount$/;"	r
 forksCount	src/sampleDB/repositories.js	/^    forksCount: 13902,$/;"	r
 forksCount	src/sampleDB/repositories.js	/^    forksCount: 1589,$/;"	r
 forksCount	src/sampleDB/repositories.js	/^    forksCount: 18349,$/;"	r
@@ -31,22 +46,35 @@ fullName	src/sampleDB/repositories.js	/^    fullName: 'django\/django',$/;"	r
 fullName	src/sampleDB/repositories.js	/^    fullName: 'jaredpalmer\/formik',$/;"	r
 fullName	src/sampleDB/repositories.js	/^    fullName: 'rails\/rails',$/;"	r
 fullName	src/sampleDB/repositories.js	/^    fullName: 'reduxjs\/redux',$/;"	r
+fullname	src/graphql/queries.js	/^      fullname$/;"	r
 grey	src/styles/base.js	/^  grey: '#e1e5e8',$/;"	r
+headers	src/utils/apolloClient.js	/^        headers: {$/;"	r
 height	src/styles/base.js	/^      height: 4,$/;"	r
+icon	app.config.js	/^  icon: '.\/assets\/icon.png',$/;"	r
 iconName	src/Main.js	/^                iconName = focused ? 'albums' : 'albums-outline';$/;"	r
+iconName	src/Main.js	/^                iconName = focused ? 'person-add' : 'person-add-outline';$/;"	r
 iconName	src/Main.js	/^                iconName = focused ? 'person-circle' : 'person-circle-outline';$/;"	r
 iconName	src/Main.js	/^              let iconName;$/;"	r
+id	src/graphql/queries.js	/^      id$/;"	r
 id	src/sampleDB/repositories.js	/^    id: 'django.django',$/;"	r
 id	src/sampleDB/repositories.js	/^    id: 'jaredpalmer.formik',$/;"	r
 id	src/sampleDB/repositories.js	/^    id: 'rails.rails',$/;"	r
 id	src/sampleDB/repositories.js	/^    id: 'reduxjs.redux',$/;"	r
+image	app.config.js	/^    image: '.\/assets\/splash.png',$/;"	r
+ios	app.config.js	/^  ios: {$/;"	r
 justifyContent	src/styles/base.js	/^    justifyContent: 'space-evenly',$/;"	r
+language	src/graphql/queries.js	/^      language$/;"	r
 language	src/sampleDB/repositories.js	/^    language: 'Python',$/;"	r
 language	src/sampleDB/repositories.js	/^    language: 'Ruby',$/;"	r
 language	src/sampleDB/repositories.js	/^    language: 'TypeScript',$/;"	r
 lightBlack	src/styles/base.js	/^  lightBlack: '#24292e',$/;"	r
+link	src/utils/apolloClient.js	/^    link: authLink.concat(httpLink),$/;"	r
 marginBottom	src/Main.js	/^              marginBottom: 5,$/;"	r
 marginTop	src/styles/base.js	/^    marginTop: appBar.container.paddingTop + 40, *\/$/;"	r
+name	app.config.js	/^  name: 'rate-repository-app',$/;"	r
+namespace	src/utils/authStorage.js	/^    this.namespace = namespace;$/;"	r
+orientation	app.config.js	/^  orientation: 'portrait',$/;"	r
+ownerAvatarUrl	src/graphql/queries.js	/^      ownerAvatarUrl$/;"	r
 ownerAvatarUrl	src/sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars1.githubusercontent.com\/u\/4223?v=4',$/;"	r
 ownerAvatarUrl	src/sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars2.githubusercontent.com\/u\/27804?v=4',$/;"	r
 ownerAvatarUrl	src/sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars2.githubusercontent.com\/u\/4060187?v=4',$/;"	r
@@ -57,10 +85,13 @@ paddingRight	src/styles/base.js	/^    paddingRight: 10,$/;"	r
 paddingTop	src/styles/base.js	/^    paddingTop: 40,$/;"	r
 position	src/styles/base.js	/^    position: 'absolute',$/;"	r
 presets	babel.config.js	/^    presets: ['babel-preset-expo'],$/;"	r
+ratingAverage	src/graphql/queries.js	/^      ratingAverage$/;"	r
 ratingAverage	src/sampleDB/repositories.js	/^    ratingAverage: 0,$/;"	r
 ratingAverage	src/sampleDB/repositories.js	/^    ratingAverage: 100,$/;"	r
 ratingAverage	src/sampleDB/repositories.js	/^    ratingAverage: 73,$/;"	r
 ratingAverage	src/sampleDB/repositories.js	/^    ratingAverage: 88,$/;"	r
+resizeMode	app.config.js	/^    resizeMode: 'contain',$/;"	r
+reviewCount	src/graphql/queries.js	/^      reviewCount$/;"	r
 reviewCount	src/sampleDB/repositories.js	/^    reviewCount: 0,$/;"	r
 reviewCount	src/sampleDB/repositories.js	/^    reviewCount: 2,$/;"	r
 reviewCount	src/sampleDB/repositories.js	/^    reviewCount: 4,$/;"	r
@@ -71,15 +102,23 @@ shadowColor	src/styles/base.js	/^    shadowColor: '#000',$/;"	r
 shadowOffset	src/styles/base.js	/^    shadowOffset: {$/;"	r
 shadowOpacity	src/styles/base.js	/^    shadowOpacity: 0.32,$/;"	r
 shadowRadius	src/styles/base.js	/^    shadowRadius: 6,$/;"	r
+slug	app.config.js	/^  slug: 'rate-repository-app',$/;"	r
+splash	app.config.js	/^  splash: {$/;"	r
+stargazersCount	src/graphql/queries.js	/^      stargazersCount$/;"	r
 stargazersCount	src/sampleDB/repositories.js	/^    stargazersCount: 21553,$/;"	r
 stargazersCount	src/sampleDB/repositories.js	/^    stargazersCount: 45377,$/;"	r
 stargazersCount	src/sampleDB/repositories.js	/^    stargazersCount: 48496,$/;"	r
 stargazersCount	src/sampleDB/repositories.js	/^    stargazersCount: 52869,$/;"	r
+supportsTablet	app.config.js	/^    supportsTablet: true,$/;"	r
 tabBarActiveTintColor	src/Main.js	/^            tabBarActiveTintColor: colors.blue,$/;"	r
 tabBarHideOnKeyboard	src/Main.js	/^            tabBarHideOnKeyboard: true,$/;"	r
 tabBarIcon	src/Main.js	/^            tabBarIcon: ({ focused, color, size }) => {$/;"	r
 tabBarInactiveTintColor	src/Main.js	/^            tabBarInactiveTintColor: colors.grey,$/;"	r
 tabBarItemStyle	src/Main.js	/^            tabBarItemStyle: {$/;"	r
+updates	app.config.js	/^  updates: {$/;"	r
+uri	src/utils/apolloClient.js	/^    uri: Constants.manifest.extra.BACKEND_URI,$/;"	r
+version	app.config.js	/^  version: '1.0.0',$/;"	r
+web	app.config.js	/^  web: {$/;"	r
 white	src/styles/base.js	/^  white: '#fff',$/;"	r
 width	src/styles/base.js	/^      width: 0,$/;"	r
 width	src/styles/base.js	/^    width: '100%',$/;"	r

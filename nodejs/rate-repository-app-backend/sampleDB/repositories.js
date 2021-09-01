@@ -45,4 +45,4 @@ const repositories = [
   },
 ];
 
-export default repositories;
+module.exports = repositories;

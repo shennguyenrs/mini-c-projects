@@ -64,10 +64,10 @@ const styles = StyleSheet.create({
   },
 });
 
-const infoContainer = ({ fullName, description, language }) => {
+const infoContainer = ({ fullname, description, language }) => {
   return (
     <View style={styles.inforContainer__onright}>
-      <Text style={styles.fullname}>{fullName}</Text>
+      <Text style={styles.fullname}>{fullname}</Text>
       <Text style={styles.description}>{description}</Text>
       <View style={styles.languageContainer}>
         <Text style={styles.language}>{language}</Text>

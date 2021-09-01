@@ -1,5 +1,6 @@
 import React from 'react';
-import { FlatList } from 'react-native';
+import { FlatList, View, Text, StyleSheet } from 'react-native';
+import { useQuery } from '@apollo/client';
 
 // Database
 import db from '../sampleDB/repositories';
@@ -10,8 +11,34 @@ import RenderItems from '../components/RenderItems';
 // Styles
 import { view } from '../styles/base';
 
+// Queries
+import { allRepos } from '../graphql/queries';
+
+const styles = StyleSheet.create({
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
+
 const RepositoriesList = () => {
-  return <FlatList data={db} renderItem={RenderItems} style={view.container} />;
+  const { data, loading } = useQuery(allRepos);
+
+  if (loading)
+    return (
+      <View style={styles.loadingContainer}>
+        <Text>Loading data...</Text>
+      </View>
+    );
+
+  return (
+    <FlatList
+      data={data.allRepositories}
+      renderItem={RenderItems}
+      style={view.container}
+    />
+  );
 };
 
 export default RepositoriesList;

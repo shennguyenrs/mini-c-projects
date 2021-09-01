@@ -7,6 +7,7 @@ const schema = new Schema({
   id: {
     type: String,
     require: true,
+    unique: true,
   },
   fullname: {
     type: String,
@@ -25,8 +26,9 @@ const schema = new Schema({
     require: true,
   },
   stargazersCount: { type: Number, require: true },
+  ratingAverage: { type: Number, require: true },
   reviewCount: { type: Number, require: true },
-  ownerAvatarUrl: { type: Number, require: true },
+  ownerAvatarUrl: { type: String, require: true },
 });
 
 schema.plugin(uniqueValidator);
