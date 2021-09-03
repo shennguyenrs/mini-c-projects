@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-export const allRepos = gql`
+export const ALL_REPOS = gql`
   query {
     allRepositories {
       id
@@ -12,6 +12,14 @@ export const allRepos = gql`
       ratingAverage
       reviewCount
       ownerAvatarUrl
+    }
+  }
+`;
+
+export const CURRENT_USER = gql`
+  query {
+    me {
+      username
     }
   }
 `;

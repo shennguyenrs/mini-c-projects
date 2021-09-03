@@ -4,6 +4,8 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+$email	src/graphql/mutation.js	/^  mutation signUp($username: String!, $email: String!, $password: String!) {$/;"	r
+$password	src/graphql/mutation.js	/^  mutation signIn($username: String!, $password: String!) {$/;"	r
 App	App.js	/^export default function App() {$/;"	r
 BACKEND_URI	app.config.js	/^    BACKEND_URI: process.env.BACKEND_URI,$/;"	r
 InMemoryCache	src/utils/apolloClient.js	/^import { ApolloClient, InMemoryCache, createHttpLink } from '@apollo\/client';$/;"	r
@@ -18,7 +20,7 @@ backgroundColor	src/Main.js	/^    backgroundColor: colors.grey,$/;"	r
 backgroundColor	src/styles/base.js	/^    backgroundColor: colors.lightBlack,$/;"	r
 blue	src/styles/base.js	/^  blue: '#0365d0',$/;"	r
 cache	src/utils/apolloClient.js	/^    cache: cache,$/;"	r
-color	src/Main.js	/^            tabBarIcon: ({ focused, color, size }) => {$/;"	r
+color	src/Main.js	/^    tabBarIcon: ({ focused, color, size }) => {$/;"	r
 container	src/Main.js	/^  container: {$/;"	r
 container	src/styles/base.js	/^  container: {$/;"	r
 darkGrey	src/styles/base.js	/^  darkGrey: '#626262',$/;"	r
@@ -28,6 +30,7 @@ description	src/sampleDB/repositories.js	/^    description: 'Predictable state c
 description	src/sampleDB/repositories.js	/^    description: 'Ruby on Rails',$/;"	r
 description	src/sampleDB/repositories.js	/^    description: 'The Web framework for perfectionists with deadlines.',$/;"	r
 elevation	src/styles/base.js	/^    elevation: 10,$/;"	r
+email	src/graphql/mutation.js	/^    createUser(username: $username, email: $email, password: $password) {$/;"	r
 error	src/styles/base.js	/^  error: '#FE5F55',$/;"	r
 exports	babel.config.js	/^module.exports = function(api) {$/;"	r
 extra	app.config.js	/^  extra: {$/;"	r
@@ -51,10 +54,11 @@ grey	src/styles/base.js	/^  grey: '#e1e5e8',$/;"	r
 headers	src/utils/apolloClient.js	/^        headers: {$/;"	r
 height	src/styles/base.js	/^      height: 4,$/;"	r
 icon	app.config.js	/^  icon: '.\/assets\/icon.png',$/;"	r
-iconName	src/Main.js	/^                iconName = focused ? 'albums' : 'albums-outline';$/;"	r
-iconName	src/Main.js	/^                iconName = focused ? 'person-add' : 'person-add-outline';$/;"	r
-iconName	src/Main.js	/^                iconName = focused ? 'person-circle' : 'person-circle-outline';$/;"	r
-iconName	src/Main.js	/^              let iconName;$/;"	r
+iconName	src/Main.js	/^        iconName = focused ? 'albums' : 'albums-outline';$/;"	r
+iconName	src/Main.js	/^        iconName = focused ? 'log-in' : 'log-in-outline';$/;"	r
+iconName	src/Main.js	/^        iconName = focused ? 'person' : 'person-outline';$/;"	r
+iconName	src/Main.js	/^        iconName = focused ? 'person-add' : 'person-add-outline';$/;"	r
+iconName	src/Main.js	/^      let iconName;$/;"	r
 id	src/graphql/queries.js	/^      id$/;"	r
 id	src/sampleDB/repositories.js	/^    id: 'django.django',$/;"	r
 id	src/sampleDB/repositories.js	/^    id: 'jaredpalmer.formik',$/;"	r
@@ -69,7 +73,7 @@ language	src/sampleDB/repositories.js	/^    language: 'Ruby',$/;"	r
 language	src/sampleDB/repositories.js	/^    language: 'TypeScript',$/;"	r
 lightBlack	src/styles/base.js	/^  lightBlack: '#24292e',$/;"	r
 link	src/utils/apolloClient.js	/^    link: authLink.concat(httpLink),$/;"	r
-marginBottom	src/Main.js	/^              marginBottom: 5,$/;"	r
+marginBottom	src/Main.js	/^      marginBottom: 5,$/;"	r
 marginTop	src/styles/base.js	/^    marginTop: appBar.container.paddingTop + 40, *\/$/;"	r
 name	app.config.js	/^  name: 'rate-repository-app',$/;"	r
 namespace	src/utils/authStorage.js	/^    this.namespace = namespace;$/;"	r
@@ -83,6 +87,7 @@ paddingBottom	src/styles/base.js	/^    paddingBottom: 20,$/;"	r
 paddingLeft	src/styles/base.js	/^    paddingLeft: 10,$/;"	r
 paddingRight	src/styles/base.js	/^    paddingRight: 10,$/;"	r
 paddingTop	src/styles/base.js	/^    paddingTop: 40,$/;"	r
+password	src/graphql/mutation.js	/^    login(username: $username, password: $password) {$/;"	r
 position	src/styles/base.js	/^    position: 'absolute',$/;"	r
 presets	babel.config.js	/^    presets: ['babel-preset-expo'],$/;"	r
 ratingAverage	src/graphql/queries.js	/^      ratingAverage$/;"	r
@@ -96,7 +101,6 @@ reviewCount	src/sampleDB/repositories.js	/^    reviewCount: 0,$/;"	r
 reviewCount	src/sampleDB/repositories.js	/^    reviewCount: 2,$/;"	r
 reviewCount	src/sampleDB/repositories.js	/^    reviewCount: 4,$/;"	r
 reviewCount	src/sampleDB/repositories.js	/^    reviewCount: 5,$/;"	r
-screenOptions	src/Main.js	/^          screenOptions={({ route }) => ({$/;"	r
 shadow	src/styles/base.js	/^  shadow: {$/;"	r
 shadowColor	src/styles/base.js	/^    shadowColor: '#000',$/;"	r
 shadowOffset	src/styles/base.js	/^    shadowOffset: {$/;"	r
@@ -110,13 +114,15 @@ stargazersCount	src/sampleDB/repositories.js	/^    stargazersCount: 45377,$/;"	r
 stargazersCount	src/sampleDB/repositories.js	/^    stargazersCount: 48496,$/;"	r
 stargazersCount	src/sampleDB/repositories.js	/^    stargazersCount: 52869,$/;"	r
 supportsTablet	app.config.js	/^    supportsTablet: true,$/;"	r
-tabBarActiveTintColor	src/Main.js	/^            tabBarActiveTintColor: colors.blue,$/;"	r
-tabBarHideOnKeyboard	src/Main.js	/^            tabBarHideOnKeyboard: true,$/;"	r
-tabBarIcon	src/Main.js	/^            tabBarIcon: ({ focused, color, size }) => {$/;"	r
-tabBarInactiveTintColor	src/Main.js	/^            tabBarInactiveTintColor: colors.grey,$/;"	r
-tabBarItemStyle	src/Main.js	/^            tabBarItemStyle: {$/;"	r
+tabBarActiveTintColor	src/Main.js	/^    tabBarActiveTintColor: colors.blue,$/;"	r
+tabBarHideOnKeyboard	src/Main.js	/^    tabBarHideOnKeyboard: true,$/;"	r
+tabBarIcon	src/Main.js	/^    tabBarIcon: ({ focused, color, size }) => {$/;"	r
+tabBarInactiveTintColor	src/Main.js	/^    tabBarInactiveTintColor: colors.grey,$/;"	r
+tabBarItemStyle	src/Main.js	/^    tabBarItemStyle: {$/;"	r
 updates	app.config.js	/^  updates: {$/;"	r
 uri	src/utils/apolloClient.js	/^    uri: Constants.manifest.extra.BACKEND_URI,$/;"	r
+username	src/graphql/queries.js	/^      username$/;"	r
+value	src/graphql/mutation.js	/^      value$/;"	r
 version	app.config.js	/^  version: '1.0.0',$/;"	r
 web	app.config.js	/^  web: {$/;"	r
 white	src/styles/base.js	/^  white: '#fff',$/;"	r

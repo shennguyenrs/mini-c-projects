@@ -2,9 +2,6 @@ import React from 'react';
 import { FlatList, View, Text, StyleSheet } from 'react-native';
 import { useQuery } from '@apollo/client';
 
-// Database
-import db from '../sampleDB/repositories';
-
 // Components
 import RenderItems from '../components/RenderItems';
 
@@ -12,7 +9,7 @@ import RenderItems from '../components/RenderItems';
 import { view } from '../styles/base';
 
 // Queries
-import { allRepos } from '../graphql/queries';
+import { ALL_REPOS } from '../graphql/queries';
 
 const styles = StyleSheet.create({
   loadingContainer: {
@@ -23,7 +20,7 @@ const styles = StyleSheet.create({
 });
 
 const RepositoriesList = () => {
-  const { data, loading } = useQuery(allRepos);
+  const { data, loading } = useQuery(ALL_REPOS);
 
   if (loading)
     return (
