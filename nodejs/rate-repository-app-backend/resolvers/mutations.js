@@ -13,13 +13,14 @@ const createUser = async (_root, args) => {
 
   const newUser = new User({
     username: args.username,
+    email: args.email,
     password: hashPW,
   });
 
   const savedUser = await newUser.save();
 
   const userForToken = {
-    username: savedUser.username,
+    email: savedUser.email,
     id: savedUser._id,
   };
 
@@ -27,16 +28,16 @@ const createUser = async (_root, args) => {
 };
 
 const login = async (_root, args) => {
-  const foundUser = await User.findOne({ username: args.username });
+  const foundUser = await User.findOne({ email: args.email });
 
-  if (!foundUser) throw new UserInputError('Wrong username');
+  if (!foundUser) throw new UserInputError('Wrong email');
 
   const validPW = await bcrypt.compare(args.password, foundUser.password);
 
   if (!validPW) throw new UserInputError('Wrong password');
 
   const userForToken = {
-    username: foundUser.username,
+    email: foundUser.email,
     id: foundUser._id,
   };
 

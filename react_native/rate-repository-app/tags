@@ -11,6 +11,7 @@ BACKEND_URI	app.config.js	/^    BACKEND_URI: process.env.BACKEND_URI,$/;"	r
 InMemoryCache	src/utils/apolloClient.js	/^import { ApolloClient, InMemoryCache, createHttpLink } from '@apollo\/client';$/;"	r
 Main	src/Main.js	/^export default function Main() {$/;"	r
 adaptiveIcon	app.config.js	/^    adaptiveIcon: {$/;"	r
+alignItems	src/styles/base.js	/^    alignItems: 'center',$/;"	r
 android	app.config.js	/^  android: {$/;"	r
 assetBundlePatterns	app.config.js	/^  assetBundlePatterns: ['**\/*'],$/;"	r
 authorization	src/utils/apolloClient.js	/^          authorization: token ? `bearer ${token}` : '',$/;"	r
@@ -18,11 +19,22 @@ backgroundColor	app.config.js	/^      backgroundColor: '#FFFFFF',$/;"	r
 backgroundColor	app.config.js	/^    backgroundColor: '#ffffff',$/;"	r
 backgroundColor	src/Main.js	/^    backgroundColor: colors.grey,$/;"	r
 backgroundColor	src/styles/base.js	/^    backgroundColor: colors.lightBlack,$/;"	r
+backgroundColor	src/styles/button.js	/^    backgroundColor: colors.blue,$/;"	r
+backgroundColor	src/styles/input.js	/^    backgroundColor: colors.white,$/;"	r
 blue	src/styles/base.js	/^  blue: '#0365d0',$/;"	r
+borderRadius	src/styles/button.js	/^    borderRadius: 30,$/;"	r
+borderRadius	src/styles/input.js	/^    borderRadius: 4,$/;"	r
 cache	src/utils/apolloClient.js	/^    cache: cache,$/;"	r
+center	src/styles/base.js	/^  center: {$/;"	r
+children	src/Main.js	/^            children={() => <User setToken={setToken} \/>}$/;"	r
+children	src/Main.js	/^          children={() => <SignUpFormik setToken={setToken} \/>}$/;"	r
 color	src/Main.js	/^    tabBarIcon: ({ focused, color, size }) => {$/;"	r
+color	src/styles/base.js	/^    color: colors.error,$/;"	r
+color	src/styles/button.js	/^    color: colors.white,$/;"	r
 container	src/Main.js	/^  container: {$/;"	r
 container	src/styles/base.js	/^  container: {$/;"	r
+container	src/styles/button.js	/^  container: {$/;"	r
+container	src/styles/input.js	/^  container: {$/;"	r
 darkGrey	src/styles/base.js	/^  darkGrey: '#626262',$/;"	r
 description	src/graphql/queries.js	/^      description$/;"	r
 description	src/sampleDB/repositories.js	/^    description: 'Build forms in React, without the tears',$/;"	r
@@ -38,7 +50,11 @@ fallbackToCacheTimeout	app.config.js	/^    fallbackToCacheTimeout: 0,$/;"	r
 favicon	app.config.js	/^    favicon: '.\/assets\/favicon.png',$/;"	r
 flex	src/Main.js	/^    flex: 1,$/;"	r
 flex	src/styles/base.js	/^    flex: 1,$/;"	r
+flex	src/styles/button.js	/^    flex: 1,$/;"	r
+flexDirection	src/styles/base.js	/^    flexDirection: 'column',$/;"	r
 flexDirection	src/styles/base.js	/^    flexDirection: 'row',$/;"	r
+flexDirection	src/styles/button.js	/^    flexDirection: 'row',$/;"	r
+fontWeight	src/styles/button.js	/^    fontWeight: 'bold',$/;"	r
 foregroundImage	app.config.js	/^      foregroundImage: '.\/assets\/adaptive-icon.png',$/;"	r
 forksCount	src/graphql/queries.js	/^      forksCount$/;"	r
 forksCount	src/sampleDB/repositories.js	/^    forksCount: 13902,$/;"	r
@@ -66,6 +82,7 @@ id	src/sampleDB/repositories.js	/^    id: 'rails.rails',$/;"	r
 id	src/sampleDB/repositories.js	/^    id: 'reduxjs.redux',$/;"	r
 image	app.config.js	/^    image: '.\/assets\/splash.png',$/;"	r
 ios	app.config.js	/^  ios: {$/;"	r
+justifyContent	src/styles/base.js	/^    justifyContent: 'center',$/;"	r
 justifyContent	src/styles/base.js	/^    justifyContent: 'space-evenly',$/;"	r
 language	src/graphql/queries.js	/^      language$/;"	r
 language	src/sampleDB/repositories.js	/^    language: 'Python',$/;"	r
@@ -74,8 +91,15 @@ language	src/sampleDB/repositories.js	/^    language: 'TypeScript',$/;"	r
 lightBlack	src/styles/base.js	/^  lightBlack: '#24292e',$/;"	r
 link	src/utils/apolloClient.js	/^    link: authLink.concat(httpLink),$/;"	r
 marginBottom	src/Main.js	/^      marginBottom: 5,$/;"	r
-marginTop	src/styles/base.js	/^    marginTop: appBar.container.paddingTop + 40, *\/$/;"	r
+marginBottom	src/styles/input.js	/^    marginBottom: 10,$/;"	r
+marginLeft	src/styles/button.js	/^    marginLeft: 5,$/;"	r
+marginTop	src/styles/button.js	/^    marginTop: 10,$/;"	r
+marginTop	src/styles/input.js	/^    marginTop: 10,$/;"	r
+maxHeight	src/styles/button.js	/^    maxHeight: 40,$/;"	r
+message	src/styles/base.js	/^  message: {$/;"	r
 name	app.config.js	/^  name: 'rate-repository-app',$/;"	r
+name	src/Main.js	/^            name="User"$/;"	r
+name	src/Main.js	/^          name="Sign Up"$/;"	r
 namespace	src/utils/authStorage.js	/^    this.namespace = namespace;$/;"	r
 orientation	app.config.js	/^  orientation: 'portrait',$/;"	r
 ownerAvatarUrl	src/graphql/queries.js	/^      ownerAvatarUrl$/;"	r
@@ -84,9 +108,13 @@ ownerAvatarUrl	src/sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/ava
 ownerAvatarUrl	src/sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars2.githubusercontent.com\/u\/4060187?v=4',$/;"	r
 ownerAvatarUrl	src/sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars3.githubusercontent.com\/u\/13142323?v=4',$/;"	r
 paddingBottom	src/styles/base.js	/^    paddingBottom: 20,$/;"	r
+paddingHorizontal	src/styles/button.js	/^    paddingHorizontal: 40,$/;"	r
+paddingHorizontal	src/styles/input.js	/^    paddingHorizontal: 20,$/;"	r
 paddingLeft	src/styles/base.js	/^    paddingLeft: 10,$/;"	r
 paddingRight	src/styles/base.js	/^    paddingRight: 10,$/;"	r
 paddingTop	src/styles/base.js	/^    paddingTop: 40,$/;"	r
+paddingVertical	src/styles/button.js	/^    paddingVertical: 10,$/;"	r
+paddingVertical	src/styles/input.js	/^    paddingVertical: 5,$/;"	r
 password	src/graphql/mutation.js	/^    login(username: $username, password: $password) {$/;"	r
 position	src/styles/base.js	/^    position: 'absolute',$/;"	r
 presets	babel.config.js	/^    presets: ['babel-preset-expo'],$/;"	r
@@ -119,6 +147,7 @@ tabBarHideOnKeyboard	src/Main.js	/^    tabBarHideOnKeyboard: true,$/;"	r
 tabBarIcon	src/Main.js	/^    tabBarIcon: ({ focused, color, size }) => {$/;"	r
 tabBarInactiveTintColor	src/Main.js	/^    tabBarInactiveTintColor: colors.grey,$/;"	r
 tabBarItemStyle	src/Main.js	/^    tabBarItemStyle: {$/;"	r
+text	src/styles/button.js	/^  text: {$/;"	r
 updates	app.config.js	/^  updates: {$/;"	r
 uri	src/utils/apolloClient.js	/^    uri: Constants.manifest.extra.BACKEND_URI,$/;"	r
 username	src/graphql/queries.js	/^      username$/;"	r
@@ -128,5 +157,5 @@ web	app.config.js	/^  web: {$/;"	r
 white	src/styles/base.js	/^  white: '#fff',$/;"	r
 width	src/styles/base.js	/^      width: 0,$/;"	r
 width	src/styles/base.js	/^    width: '100%',$/;"	r
+width	src/styles/input.js	/^    width: 300,$/;"	r
 zIndex	src/styles/base.js	/^    zIndex: 1,$/;"	r
-zIndex	src/styles/base.js	/^    zIndex: appBar.container.zIndex - 1,$/;"	r

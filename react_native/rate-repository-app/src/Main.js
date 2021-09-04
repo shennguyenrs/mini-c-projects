@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -10,9 +10,7 @@ import RepositoriesList from './screens/RepositoriesList';
 // import SignInForm from './screens/SignInForm';
 import SignInFormik from './screens/SignInFormik';
 import SignUpFormik from './screens/SignUpFormik';
-
-//Import hooks
-import useAuthStorage from './hooks/useAuthStorage';
+import User from './screens/User';
 
 // Import base style
 import { colors } from './styles/base';
@@ -30,9 +28,6 @@ const Tab = createBottomTabNavigator();
 
 // Main Component
 export default function Main() {
-  const localStorage = useAuthStorage();
-  console.log(localStorage.getAccessToken());
-
   const [token, setToken] = useState(null);
 
   const screenOptions = ({ route }) => ({
@@ -64,7 +59,10 @@ export default function Main() {
       return (
         <Tab.Navigator screenOptions={screenOptions}>
           <Tab.Screen name="Repositories" component={RepositoriesList} />
-          <Tab.Screen name="User" component={User} />
+          <Tab.Screen
+            name="User"
+            children={() => <User setToken={setToken} />}
+          />
         </Tab.Navigator>
       );
     }
@@ -73,7 +71,10 @@ export default function Main() {
       <Tab.Navigator screenOptions={screenOptions}>
         <Tab.Screen name="Repositories" component={RepositoriesList} />
         <Tab.Screen name="Sign In" component={SignInFormik} />
-        <Tab.Screen name="Sign Up" component={SignUpFormik} />
+        <Tab.Screen
+          name="Sign Up"
+          children={() => <SignUpFormik setToken={setToken} />}
+        />
       </Tab.Navigator>
     );
   };

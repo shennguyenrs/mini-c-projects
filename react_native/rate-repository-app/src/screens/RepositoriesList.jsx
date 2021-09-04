@@ -5,9 +5,6 @@ import { useQuery } from '@apollo/client';
 // Components
 import RenderItems from '../components/RenderItems';
 
-// Styles
-import { view } from '../styles/base';
-
 // Queries
 import { ALL_REPOS } from '../graphql/queries';
 
@@ -29,13 +26,7 @@ const RepositoriesList = () => {
       </View>
     );
 
-  return (
-    <FlatList
-      data={data.allRepositories}
-      renderItem={RenderItems}
-      style={view.container}
-    />
-  );
+  return <FlatList data={data.allRepositories} renderItem={RenderItems} />;
 };
 
 export default RepositoriesList;

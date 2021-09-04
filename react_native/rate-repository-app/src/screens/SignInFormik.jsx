@@ -3,44 +3,10 @@ import { View, TextInput, Text, Pressable, StyleSheet } from 'react-native';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
-import { colors, shadow } from '../styles/base';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column',
-  },
-  input: {
-    width: 300,
-    backgroundColor: colors.white,
-    marginTop: 10,
-    marginBottom: 10,
-    paddingHorizontal: 20,
-    paddingVertical: 5,
-    borderRadius: 4,
-  },
-  button: {
-    flex: 1,
-    flexDirection: 'row',
-    marginTop: 10,
-    fontWeight: 'bold',
-    backgroundColor: colors.blue,
-    borderRadius: 30,
-    maxHeight: 40,
-    paddingVertical: 10,
-    paddingHorizontal: 40,
-  },
-  buttonText: {
-    color: colors.white,
-    marginLeft: 5,
-    fontWeight: 'bold',
-  },
-  errorMessage: {
-    color: colors.error,
-  },
-});
+// Import styles
+import { colors, shadow, container, error } from '../styles/base';
+import button from '../styles/button';
+import input from '../styles/input';
 
 const signInValidation = Yup.object().shape({
   email: Yup.string().required('Required').email('Invalid email'),
@@ -55,8 +21,6 @@ const SignInFormik = ({ navigation }) => (
     initialValues={{ email: '', password: '' }}
     validationSchema={signInValidation}
     onSubmit={(values, actions) => {
-      console.log(values);
-
       // Reset form value
       actions.resetForm({
         email: '',
@@ -68,31 +32,31 @@ const SignInFormik = ({ navigation }) => (
     }}
   >
     {({ handleChange, handleSubmit, values, errors, touched }) => (
-      <View style={[styles.container]}>
+      <View style={[container.center]}>
         <TextInput
-          style={[styles.input, shadow.shadow]}
+          style={[input.container, shadow.shadow]}
           placeholder="Email"
           onChangeText={handleChange('email')}
           value={values.email}
         />
         {errors.email && touched.email ? (
-          <Text style={styles.errorMessage}>{errors.email}</Text>
+          <Text style={error.message}>{errors.email}</Text>
         ) : null}
         <TextInput
-          style={[styles.input, shadow.shadow]}
+          style={[input.container, shadow.shadow]}
           placeholder="Password"
           onChangeText={handleChange('password')}
           value={values.password}
           secureTextEntry={true}
         />
         {errors.password && touched.password ? (
-          <Text style={styles.errorMessage}>{errors.password}</Text>
+          <Text style={error.message}>{errors.password}</Text>
         ) : null}
         <Pressable
           onPress={handleSubmit}
-          style={[styles.button, shadow.shadow]}
+          style={[button.container, shadow.shadow]}
         >
-          <Text style={[styles.buttonText]}>Sign In</Text>
+          <Text style={[button.text]}>Sign In</Text>
         </Pressable>
       </View>
     )}

@@ -65,7 +65,7 @@ const signUpValidation = Yup.object().shape({
 });
 
 // Sign up form component
-const SignUpFormik = ({ navigation }) => {
+const SignUpFormik = ({ navigation, setToken }) => {
   const [signup, result] = useMutation(CREATE_USER, {
     onError: (err) => {
       console.log(err.graphQLErrors[0].message);
@@ -76,6 +76,12 @@ const SignUpFormik = ({ navigation }) => {
   useEffect(() => {
     if (result.data) {
       const token = result.data.createUser.value;
+
+      setToken(token);
+
+      async () => {
+        await authStorage.setAccessToken(token);
+      };
     }
   }, [result.data]);
 

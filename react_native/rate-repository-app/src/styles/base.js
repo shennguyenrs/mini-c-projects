@@ -25,14 +25,6 @@ export const appBar = StyleSheet.create({
   },
 });
 
-export const view = StyleSheet.create({
-  container: {
-    /* position: 'relative',
-    zIndex: appBar.container.zIndex - 1,
-    marginTop: appBar.container.paddingTop + 40, */
-  },
-});
-
 export const shadow = StyleSheet.create({
   shadow: {
     shadowColor: '#000',
@@ -43,5 +35,20 @@ export const shadow = StyleSheet.create({
     shadowOpacity: 0.32,
     shadowRadius: 6,
     elevation: 10,
+  },
+});
+
+export const container = StyleSheet.create({
+  center: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+  },
+});
+
+export const error = StyleSheet.create({
+  message: {
+    color: colors.error,
   },
 });

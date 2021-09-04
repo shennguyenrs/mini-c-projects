@@ -18,6 +18,12 @@ description	sampleDB/repositories.js	/^    description: 'Predictable state conta
 description	sampleDB/repositories.js	/^    description: 'Ruby on Rails',$/;"	r
 description	sampleDB/repositories.js	/^    description: 'The Web framework for perfectionists with deadlines.',$/;"	r
 description	utils/addSamples.js	/^        description: item.description,$/;"	r
+email	apollo/typeDefs.js	/^    createUser(username: String!, email: String!, password: String!): Token$/;"	r
+email	apollo/typeDefs.js	/^    email: String!$/;"	r
+email	models/User.js	/^  email: {$/;"	r
+email	resolvers/mutations.js	/^    email: args.email,$/;"	r
+email	resolvers/mutations.js	/^    email: foundUser.email,$/;"	r
+email	resolvers/mutations.js	/^    email: savedUser.email,$/;"	r
 exports	apollo/server.js	/^module.exports = server;$/;"	r
 exports	apollo/typeDefs.js	/^module.exports = typeDefs;$/;"	r
 exports	app.js	/^module.exports = app;$/;"	r
@@ -61,6 +67,7 @@ language	sampleDB/repositories.js	/^    language: 'Ruby',$/;"	r
 language	sampleDB/repositories.js	/^    language: 'TypeScript',$/;"	r
 language	utils/addSamples.js	/^        language: item.language,$/;"	r
 login	resolvers/mutations.js	/^  login: (root, args) => login(root, args),$/;"	r
+me	apollo/typeDefs.js	/^    me: User!$/;"	r
 me	resolvers/queries.js	/^  me: (_root, _args, context) => context.currentUser,$/;"	r
 ownerAvatarUrl	apollo/typeDefs.js	/^    ownerAvatarUrl: String!$/;"	r
 ownerAvatarUrl	models/Repository.js	/^  ownerAvatarUrl: { type: String, require: true },$/;"	r
@@ -69,7 +76,6 @@ ownerAvatarUrl	sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars
 ownerAvatarUrl	sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars2.githubusercontent.com\/u\/4060187?v=4',$/;"	r
 ownerAvatarUrl	sampleDB/repositories.js	/^    ownerAvatarUrl: 'https:\/\/avatars3.githubusercontent.com\/u\/13142323?v=4',$/;"	r
 ownerAvatarUrl	utils/addSamples.js	/^        ownerAvatarUrl: item.ownerAvatarUrl,$/;"	r
-password	apollo/typeDefs.js	/^    createUser(username: String!, password: String!): Token$/;"	r
 password	apollo/typeDefs.js	/^    login(username: String!, password: String!): Token$/;"	r
 password	apollo/typeDefs.js	/^    password: String!$/;"	r
 password	models/User.js	/^  password: {$/;"	r
@@ -115,6 +121,4 @@ useUnifiedTopology	utils/connection.js	/^  useUnifiedTopology: true,$/;"	r
 username	apollo/typeDefs.js	/^    username: String!$/;"	r
 username	models/User.js	/^  username: {$/;"	r
 username	resolvers/mutations.js	/^    username: args.username,$/;"	r
-username	resolvers/mutations.js	/^    username: foundUser.username,$/;"	r
-username	resolvers/mutations.js	/^    username: savedUser.username,$/;"	r
 value	apollo/typeDefs.js	/^    value: String!$/;"	r
