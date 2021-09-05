@@ -17,7 +17,11 @@ const styles = StyleSheet.create({
 });
 
 const RepositoriesList = () => {
-  const { data, loading } = useQuery(ALL_REPOS);
+  const { data, loading } = useQuery(ALL_REPOS, {
+    onError: (error) => {
+      console.log(error);
+    },
+  });
 
   if (loading)
     return (
@@ -26,7 +30,12 @@ const RepositoriesList = () => {
       </View>
     );
 
-  return <FlatList data={data.allRepositories} renderItem={RenderItems} />;
+  return (
+    <FlatList
+      data={data ? data.allRepositories : []}
+      renderItem={RenderItems}
+    />
+  );
 };
 
 export default RepositoriesList;

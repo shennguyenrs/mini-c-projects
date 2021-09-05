@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -15,6 +15,12 @@ import User from './screens/User';
 // Import base style
 import { colors } from './styles/base';
 
+// Import hooks
+import useAuthStorage from './hooks/useAuthStorage';
+
+// Import utils
+import * as tokenUtils from './utils/tokenUtils';
+
 // Local styles
 const styles = StyleSheet.create({
   container: {
@@ -29,6 +35,14 @@ const Tab = createBottomTabNavigator();
 // Main Component
 export default function Main() {
   const [token, setToken] = useState(null);
+  const authStorage = useAuthStorage();
+
+  // Fetch token
+  tokenUtils.returnTokenFromLocal(authStorage).then((value) => {
+    if (value) {
+      setToken(value);
+    }
+  });
 
   const screenOptions = ({ route }) => ({
     tabBarIcon: ({ focused, color, size }) => {
@@ -70,7 +84,10 @@ export default function Main() {
     return (
       <Tab.Navigator screenOptions={screenOptions}>
         <Tab.Screen name="Repositories" component={RepositoriesList} />
-        <Tab.Screen name="Sign In" component={SignInFormik} />
+        <Tab.Screen
+          name="Sign In"
+          children={() => <SignInFormik setToken={setToken} />}
+        />
         <Tab.Screen
           name="Sign Up"
           children={() => <SignUpFormik setToken={setToken} />}

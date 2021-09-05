@@ -5,7 +5,7 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 $email	src/graphql/mutation.js	/^  mutation signUp($username: String!, $email: String!, $password: String!) {$/;"	r
-$password	src/graphql/mutation.js	/^  mutation signIn($username: String!, $password: String!) {$/;"	r
+$password	src/graphql/mutation.js	/^  mutation signIn($email: String!, $password: String!) {$/;"	r
 App	App.js	/^export default function App() {$/;"	r
 BACKEND_URI	app.config.js	/^    BACKEND_URI: process.env.BACKEND_URI,$/;"	r
 InMemoryCache	src/utils/apolloClient.js	/^import { ApolloClient, InMemoryCache, createHttpLink } from '@apollo\/client';$/;"	r
@@ -27,6 +27,7 @@ borderRadius	src/styles/input.js	/^    borderRadius: 4,$/;"	r
 cache	src/utils/apolloClient.js	/^    cache: cache,$/;"	r
 center	src/styles/base.js	/^  center: {$/;"	r
 children	src/Main.js	/^            children={() => <User setToken={setToken} \/>}$/;"	r
+children	src/Main.js	/^          children={() => <SignInFormik setToken={setToken} \/>}$/;"	r
 children	src/Main.js	/^          children={() => <SignUpFormik setToken={setToken} \/>}$/;"	r
 color	src/Main.js	/^    tabBarIcon: ({ focused, color, size }) => {$/;"	r
 color	src/styles/base.js	/^    color: colors.error,$/;"	r
@@ -99,6 +100,7 @@ maxHeight	src/styles/button.js	/^    maxHeight: 40,$/;"	r
 message	src/styles/base.js	/^  message: {$/;"	r
 name	app.config.js	/^  name: 'rate-repository-app',$/;"	r
 name	src/Main.js	/^            name="User"$/;"	r
+name	src/Main.js	/^          name="Sign In"$/;"	r
 name	src/Main.js	/^          name="Sign Up"$/;"	r
 namespace	src/utils/authStorage.js	/^    this.namespace = namespace;$/;"	r
 orientation	app.config.js	/^  orientation: 'portrait',$/;"	r
@@ -115,7 +117,7 @@ paddingRight	src/styles/base.js	/^    paddingRight: 10,$/;"	r
 paddingTop	src/styles/base.js	/^    paddingTop: 40,$/;"	r
 paddingVertical	src/styles/button.js	/^    paddingVertical: 10,$/;"	r
 paddingVertical	src/styles/input.js	/^    paddingVertical: 5,$/;"	r
-password	src/graphql/mutation.js	/^    login(username: $username, password: $password) {$/;"	r
+password	src/graphql/mutation.js	/^    login(email: $email, password: $password) {$/;"	r
 position	src/styles/base.js	/^    position: 'absolute',$/;"	r
 presets	babel.config.js	/^    presets: ['babel-preset-expo'],$/;"	r
 ratingAverage	src/graphql/queries.js	/^      ratingAverage$/;"	r

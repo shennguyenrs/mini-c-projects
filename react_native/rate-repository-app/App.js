@@ -11,10 +11,6 @@ import AuthStorageContext from './src/contexts/AuthStorageContext';
 // Create local storage
 const localStorage = new AuthStorage();
 
-/* if (localStorage.getAccessToken()) {
-  localStorage.removeAccessToken();
-} */
-
 export default function App() {
   return (
     <ApolloProvider client={apolloClient(localStorage)}>
