@@ -19,6 +19,7 @@ export const ALL_REPOS = gql`
 export const CURRENT_USER = gql`
   query {
     me {
+      email
       username
     }
   }

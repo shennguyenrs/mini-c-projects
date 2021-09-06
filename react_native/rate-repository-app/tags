@@ -44,6 +44,7 @@ description	src/sampleDB/repositories.js	/^    description: 'Ruby on Rails',$/;"
 description	src/sampleDB/repositories.js	/^    description: 'The Web framework for perfectionists with deadlines.',$/;"	r
 elevation	src/styles/base.js	/^    elevation: 10,$/;"	r
 email	src/graphql/mutation.js	/^    createUser(username: $username, email: $email, password: $password) {$/;"	r
+email	src/graphql/queries.js	/^      email$/;"	r
 error	src/styles/base.js	/^  error: '#FE5F55',$/;"	r
 exports	babel.config.js	/^module.exports = function(api) {$/;"	r
 extra	app.config.js	/^  extra: {$/;"	r

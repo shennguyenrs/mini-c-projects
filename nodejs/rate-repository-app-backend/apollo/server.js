@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 
 const User = require('../models/User');
 
-const { SERECT_KEY } = require('../models/User');
+const { SERECT_KEY } = require('../utils/config');
 
 const typeDefs = require('./typeDefs.js');
 
@@ -21,13 +21,6 @@ const server = new ApolloServer({
   resolvers,
   context: async ({ req }) => {
     const auth = req ? req.headers.authorization : null;
-
-    /* jwt.verify(auth.substring(7), SERECT_KEY, (err, decoded) => {
-      if (err) {
-        console.log(err);
-      }
-      console.log(decoded);
-    }); */
 
     if (auth && auth.toLowerCase().startsWith('bearer')) {
       const decoded = jwt.verify(auth.substring(7), SERECT_KEY);
